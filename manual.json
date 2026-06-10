@@ -1,0 +1,58 @@
+[
+    {
+        "group_index": 0,
+        "redstoneTickDelay": 0.0, # Keep redstone tick in whole number, repeaters cant do half a redtone tick
+        "startTick": 0,
+        "chords": [
+            {
+                "block": "minecraft:dirt",
+                "pitch": "A#",
+                "note": 16,
+                "instrument": "harp",
+                "trackName": "Piano"
+            },
+            {
+                "block": "minecraft:dirt",
+                "pitch": "D#",
+                "note": 9,
+                "instrument": "harp",
+                "trackName": "Piano"
+            },
+            {
+                "block": "minecraft:dirt",
+                "pitch": "G",
+                "note": 1,
+                "instrument": "harp",
+                "trackName": "Piano"
+            }
+        ]
+    },
+    {
+        "group_index": 1,
+        "redstoneTickDelay": 14,
+        "startTick": 0,
+        "chords": [
+            {
+                "block": "minecraft:dirt",
+                "pitch": "A#",
+                "note": 16,
+                "instrument": "harp",
+                "trackName": "Piano"
+            },
+            {
+                "block": "minecraft:dirt",
+                "pitch": "D#",
+                "note": 9,
+                "instrument": "harp",
+                "trackName": "Piano"
+            },
+            {
+                "block": "minecraft:dirt",
+                "pitch": "G",
+                "note": 1,
+                "instrument": "harp",
+                "trackName": "Piano"
+            }
+        ]
+    },
+]

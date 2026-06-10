@@ -1,0 +1,8605 @@
+[
+  {
+    "group_index": 0,
+    "redstoneTickDelay": 0,
+    "startTick": 0,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 1,
+    "redstoneTickDelay": 14,
+    "startTick": 28,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 2,
+    "redstoneTickDelay": 6,
+    "startTick": 40,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 3,
+    "redstoneTickDelay": 7,
+    "startTick": 54,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 4,
+    "redstoneTickDelay": 7,
+    "startTick": 68,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 5,
+    "redstoneTickDelay": 6,
+    "startTick": 80,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 20,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 6,
+    "redstoneTickDelay": 7,
+    "startTick": 94,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 7,
+    "redstoneTickDelay": 7,
+    "startTick": 108,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 8,
+    "redstoneTickDelay": 13,
+    "startTick": 134,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 9,
+    "redstoneTickDelay": 7,
+    "startTick": 148,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 10,
+    "redstoneTickDelay": 6,
+    "startTick": 160,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 11,
+    "redstoneTickDelay": 14,
+    "startTick": 188,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 12,
+    "redstoneTickDelay": 13,
+    "startTick": 214,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 13,
+    "redstoneTickDelay": 47,
+    "startTick": 308,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 14,
+    "redstoneTickDelay": 1,
+    "startTick": 310,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 20,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 15,
+    "redstoneTickDelay": 1,
+    "startTick": 312,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 16,
+    "redstoneTickDelay": 3,
+    "startTick": 318,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 17,
+    "redstoneTickDelay": 2,
+    "startTick": 322,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 18,
+    "redstoneTickDelay": 3,
+    "startTick": 328,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 19,
+    "redstoneTickDelay": 3,
+    "startTick": 334,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 20,
+    "redstoneTickDelay": 2,
+    "startTick": 338,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 21,
+    "redstoneTickDelay": 3,
+    "startTick": 344,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 22,
+    "redstoneTickDelay": 2,
+    "startTick": 348,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 23,
+    "redstoneTickDelay": 3,
+    "startTick": 354,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 24,
+    "redstoneTickDelay": 3,
+    "startTick": 360,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 25,
+    "redstoneTickDelay": 2,
+    "startTick": 364,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 26,
+    "redstoneTickDelay": 3,
+    "startTick": 370,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 27,
+    "redstoneTickDelay": 2,
+    "startTick": 374,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 28,
+    "redstoneTickDelay": 3,
+    "startTick": 380,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 29,
+    "redstoneTickDelay": 3,
+    "startTick": 386,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 30,
+    "redstoneTickDelay": 2,
+    "startTick": 390,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 31,
+    "redstoneTickDelay": 2,
+    "startTick": 394,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 32,
+    "redstoneTickDelay": 1,
+    "startTick": 396,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 33,
+    "redstoneTickDelay": 3,
+    "startTick": 402,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 34,
+    "redstoneTickDelay": 2,
+    "startTick": 406,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 35,
+    "redstoneTickDelay": 3,
+    "startTick": 412,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 36,
+    "redstoneTickDelay": 2,
+    "startTick": 416,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 37,
+    "redstoneTickDelay": 3,
+    "startTick": 422,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 38,
+    "redstoneTickDelay": 3,
+    "startTick": 428,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 39,
+    "redstoneTickDelay": 2,
+    "startTick": 432,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 40,
+    "redstoneTickDelay": 3,
+    "startTick": 438,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 41,
+    "redstoneTickDelay": 2,
+    "startTick": 442,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 42,
+    "redstoneTickDelay": 3,
+    "startTick": 448,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 43,
+    "redstoneTickDelay": 3,
+    "startTick": 454,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 44,
+    "redstoneTickDelay": 2,
+    "startTick": 458,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 45,
+    "redstoneTickDelay": 3,
+    "startTick": 464,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 46,
+    "redstoneTickDelay": 2,
+    "startTick": 468,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 47,
+    "redstoneTickDelay": 3,
+    "startTick": 474,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 48,
+    "redstoneTickDelay": 3,
+    "startTick": 480,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 49,
+    "redstoneTickDelay": 2,
+    "startTick": 484,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 50,
+    "redstoneTickDelay": 3,
+    "startTick": 490,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 51,
+    "redstoneTickDelay": 2,
+    "startTick": 494,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 52,
+    "redstoneTickDelay": 3,
+    "startTick": 500,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 53,
+    "redstoneTickDelay": 3,
+    "startTick": 506,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 54,
+    "redstoneTickDelay": 2,
+    "startTick": 510,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 55,
+    "redstoneTickDelay": 3,
+    "startTick": 516,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 56,
+    "redstoneTickDelay": 3,
+    "startTick": 522,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 57,
+    "redstoneTickDelay": 2,
+    "startTick": 526,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 58,
+    "redstoneTickDelay": 3,
+    "startTick": 532,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 59,
+    "redstoneTickDelay": 2,
+    "startTick": 536,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 60,
+    "redstoneTickDelay": 3,
+    "startTick": 542,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 61,
+    "redstoneTickDelay": 3,
+    "startTick": 548,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 62,
+    "redstoneTickDelay": 2,
+    "startTick": 552,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 63,
+    "redstoneTickDelay": 3,
+    "startTick": 558,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 64,
+    "redstoneTickDelay": 1,
+    "startTick": 560,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 65,
+    "redstoneTickDelay": 1,
+    "startTick": 562,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 66,
+    "redstoneTickDelay": 3,
+    "startTick": 568,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 67,
+    "redstoneTickDelay": 3,
+    "startTick": 574,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 68,
+    "redstoneTickDelay": 2,
+    "startTick": 578,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 69,
+    "redstoneTickDelay": 3,
+    "startTick": 584,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 70,
+    "redstoneTickDelay": 2,
+    "startTick": 588,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 71,
+    "redstoneTickDelay": 3,
+    "startTick": 594,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 72,
+    "redstoneTickDelay": 3,
+    "startTick": 600,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 73,
+    "redstoneTickDelay": 2,
+    "startTick": 604,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 74,
+    "redstoneTickDelay": 3,
+    "startTick": 610,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 75,
+    "redstoneTickDelay": 2,
+    "startTick": 614,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 76,
+    "redstoneTickDelay": 3,
+    "startTick": 620,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 77,
+    "redstoneTickDelay": 3,
+    "startTick": 626,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 78,
+    "redstoneTickDelay": 2,
+    "startTick": 630,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 79,
+    "redstoneTickDelay": 3,
+    "startTick": 636,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 80,
+    "redstoneTickDelay": 3,
+    "startTick": 642,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 81,
+    "redstoneTickDelay": 2,
+    "startTick": 646,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 82,
+    "redstoneTickDelay": 3,
+    "startTick": 652,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 83,
+    "redstoneTickDelay": 1,
+    "startTick": 654,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 84,
+    "redstoneTickDelay": 1,
+    "startTick": 656,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 85,
+    "redstoneTickDelay": 3,
+    "startTick": 662,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 86,
+    "redstoneTickDelay": 3,
+    "startTick": 668,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 87,
+    "redstoneTickDelay": 2,
+    "startTick": 672,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 88,
+    "redstoneTickDelay": 1,
+    "startTick": 674,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 89,
+    "redstoneTickDelay": 2,
+    "startTick": 678,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 90,
+    "redstoneTickDelay": 2,
+    "startTick": 682,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 91,
+    "redstoneTickDelay": 3,
+    "startTick": 688,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 92,
+    "redstoneTickDelay": 3,
+    "startTick": 694,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 93,
+    "redstoneTickDelay": 1,
+    "startTick": 696,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 94,
+    "redstoneTickDelay": 1,
+    "startTick": 698,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 95,
+    "redstoneTickDelay": 3,
+    "startTick": 704,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 96,
+    "redstoneTickDelay": 2,
+    "startTick": 708,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 97,
+    "redstoneTickDelay": 3,
+    "startTick": 714,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 98,
+    "redstoneTickDelay": 3,
+    "startTick": 720,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 99,
+    "redstoneTickDelay": 1,
+    "startTick": 722,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 100,
+    "redstoneTickDelay": 1,
+    "startTick": 724,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 101,
+    "redstoneTickDelay": 2,
+    "startTick": 728,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 102,
+    "redstoneTickDelay": 1,
+    "startTick": 730,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 103,
+    "redstoneTickDelay": 2,
+    "startTick": 734,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 104,
+    "redstoneTickDelay": 2,
+    "startTick": 738,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 105,
+    "redstoneTickDelay": 1,
+    "startTick": 740,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 106,
+    "redstoneTickDelay": 3,
+    "startTick": 746,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 107,
+    "redstoneTickDelay": 2,
+    "startTick": 750,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 108,
+    "redstoneTickDelay": 3,
+    "startTick": 756,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 109,
+    "redstoneTickDelay": 1,
+    "startTick": 758,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 110,
+    "redstoneTickDelay": 2,
+    "startTick": 762,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 111,
+    "redstoneTickDelay": 2,
+    "startTick": 766,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 112,
+    "redstoneTickDelay": 3,
+    "startTick": 772,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 113,
+    "redstoneTickDelay": 2,
+    "startTick": 776,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 114,
+    "redstoneTickDelay": 2,
+    "startTick": 780,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 115,
+    "redstoneTickDelay": 1,
+    "startTick": 782,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 116,
+    "redstoneTickDelay": 3,
+    "startTick": 788,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 117,
+    "redstoneTickDelay": 2,
+    "startTick": 792,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 118,
+    "redstoneTickDelay": 3,
+    "startTick": 798,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 119,
+    "redstoneTickDelay": 2,
+    "startTick": 802,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 120,
+    "redstoneTickDelay": 3,
+    "startTick": 808,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 121,
+    "redstoneTickDelay": 1,
+    "startTick": 810,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 122,
+    "redstoneTickDelay": 2,
+    "startTick": 814,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 123,
+    "redstoneTickDelay": 2,
+    "startTick": 818,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 124,
+    "redstoneTickDelay": 2,
+    "startTick": 822,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 125,
+    "redstoneTickDelay": 1,
+    "startTick": 824,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 126,
+    "redstoneTickDelay": 2,
+    "startTick": 828,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 127,
+    "redstoneTickDelay": 3,
+    "startTick": 834,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 128,
+    "redstoneTickDelay": 3,
+    "startTick": 840,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 129,
+    "redstoneTickDelay": 1,
+    "startTick": 842,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 130,
+    "redstoneTickDelay": 1,
+    "startTick": 844,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 131,
+    "redstoneTickDelay": 3,
+    "startTick": 850,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 132,
+    "redstoneTickDelay": 2,
+    "startTick": 854,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 133,
+    "redstoneTickDelay": 3,
+    "startTick": 860,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 134,
+    "redstoneTickDelay": 1,
+    "startTick": 862,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 135,
+    "redstoneTickDelay": 2,
+    "startTick": 866,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 136,
+    "redstoneTickDelay": 2,
+    "startTick": 870,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 137,
+    "redstoneTickDelay": 3,
+    "startTick": 876,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 138,
+    "redstoneTickDelay": 3,
+    "startTick": 882,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 139,
+    "redstoneTickDelay": 2,
+    "startTick": 886,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 140,
+    "redstoneTickDelay": 1,
+    "startTick": 888,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 141,
+    "redstoneTickDelay": 2,
+    "startTick": 892,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 142,
+    "redstoneTickDelay": 1,
+    "startTick": 894,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 143,
+    "redstoneTickDelay": 1,
+    "startTick": 896,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 144,
+    "redstoneTickDelay": 3,
+    "startTick": 902,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 145,
+    "redstoneTickDelay": 1,
+    "startTick": 904,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 146,
+    "redstoneTickDelay": 2,
+    "startTick": 908,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 147,
+    "redstoneTickDelay": 2,
+    "startTick": 912,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 148,
+    "redstoneTickDelay": 3,
+    "startTick": 918,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 149,
+    "redstoneTickDelay": 2,
+    "startTick": 922,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 150,
+    "redstoneTickDelay": 2,
+    "startTick": 926,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 151,
+    "redstoneTickDelay": 1,
+    "startTick": 928,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 152,
+    "redstoneTickDelay": 3,
+    "startTick": 934,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 153,
+    "redstoneTickDelay": 2,
+    "startTick": 938,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 154,
+    "redstoneTickDelay": 3,
+    "startTick": 944,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 155,
+    "redstoneTickDelay": 1,
+    "startTick": 946,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 156,
+    "redstoneTickDelay": 1,
+    "startTick": 948,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 157,
+    "redstoneTickDelay": 3,
+    "startTick": 954,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 158,
+    "redstoneTickDelay": 10,
+    "startTick": 974,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 159,
+    "redstoneTickDelay": 2,
+    "startTick": 978,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 160,
+    "redstoneTickDelay": 1,
+    "startTick": 980,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 161,
+    "redstoneTickDelay": 3,
+    "startTick": 986,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 162,
+    "redstoneTickDelay": 2,
+    "startTick": 990,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 163,
+    "redstoneTickDelay": 3,
+    "startTick": 996,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 164,
+    "redstoneTickDelay": 3,
+    "startTick": 1002,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 165,
+    "redstoneTickDelay": 2,
+    "startTick": 1006,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 166,
+    "redstoneTickDelay": 3,
+    "startTick": 1012,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 167,
+    "redstoneTickDelay": 2,
+    "startTick": 1016,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 168,
+    "redstoneTickDelay": 3,
+    "startTick": 1022,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 169,
+    "redstoneTickDelay": 3,
+    "startTick": 1028,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 170,
+    "redstoneTickDelay": 2,
+    "startTick": 1032,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 171,
+    "redstoneTickDelay": 3,
+    "startTick": 1038,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 172,
+    "redstoneTickDelay": 2,
+    "startTick": 1042,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 173,
+    "redstoneTickDelay": 3,
+    "startTick": 1048,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 174,
+    "redstoneTickDelay": 3,
+    "startTick": 1054,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 175,
+    "redstoneTickDelay": 2,
+    "startTick": 1058,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 176,
+    "redstoneTickDelay": 2,
+    "startTick": 1062,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 177,
+    "redstoneTickDelay": 1,
+    "startTick": 1064,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 178,
+    "redstoneTickDelay": 2,
+    "startTick": 1068,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 179,
+    "redstoneTickDelay": 3,
+    "startTick": 1074,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 180,
+    "redstoneTickDelay": 3,
+    "startTick": 1080,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 181,
+    "redstoneTickDelay": 2,
+    "startTick": 1084,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 182,
+    "redstoneTickDelay": 3,
+    "startTick": 1090,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 183,
+    "redstoneTickDelay": 2,
+    "startTick": 1094,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 184,
+    "redstoneTickDelay": 3,
+    "startTick": 1100,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 185,
+    "redstoneTickDelay": 3,
+    "startTick": 1106,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 186,
+    "redstoneTickDelay": 2,
+    "startTick": 1110,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 187,
+    "redstoneTickDelay": 3,
+    "startTick": 1116,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 188,
+    "redstoneTickDelay": 3,
+    "startTick": 1122,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 189,
+    "redstoneTickDelay": 2,
+    "startTick": 1126,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 190,
+    "redstoneTickDelay": 3,
+    "startTick": 1132,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 191,
+    "redstoneTickDelay": 2,
+    "startTick": 1136,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 192,
+    "redstoneTickDelay": 3,
+    "startTick": 1142,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 193,
+    "redstoneTickDelay": 3,
+    "startTick": 1148,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 194,
+    "redstoneTickDelay": 2,
+    "startTick": 1152,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 195,
+    "redstoneTickDelay": 3,
+    "startTick": 1158,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 196,
+    "redstoneTickDelay": 2,
+    "startTick": 1162,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 197,
+    "redstoneTickDelay": 3,
+    "startTick": 1168,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 198,
+    "redstoneTickDelay": 3,
+    "startTick": 1174,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 199,
+    "redstoneTickDelay": 2,
+    "startTick": 1178,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 200,
+    "redstoneTickDelay": 3,
+    "startTick": 1184,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 201,
+    "redstoneTickDelay": 2,
+    "startTick": 1188,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 202,
+    "redstoneTickDelay": 3,
+    "startTick": 1194,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 203,
+    "redstoneTickDelay": 3,
+    "startTick": 1200,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 204,
+    "redstoneTickDelay": 2,
+    "startTick": 1204,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 205,
+    "redstoneTickDelay": 3,
+    "startTick": 1210,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 206,
+    "redstoneTickDelay": 2,
+    "startTick": 1214,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 207,
+    "redstoneTickDelay": 3,
+    "startTick": 1220,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 208,
+    "redstoneTickDelay": 3,
+    "startTick": 1226,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 209,
+    "redstoneTickDelay": 1,
+    "startTick": 1228,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 210,
+    "redstoneTickDelay": 1,
+    "startTick": 1230,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 211,
+    "redstoneTickDelay": 3,
+    "startTick": 1236,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 212,
+    "redstoneTickDelay": 3,
+    "startTick": 1242,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 213,
+    "redstoneTickDelay": 2,
+    "startTick": 1246,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 214,
+    "redstoneTickDelay": 3,
+    "startTick": 1252,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 215,
+    "redstoneTickDelay": 2,
+    "startTick": 1256,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 216,
+    "redstoneTickDelay": 3,
+    "startTick": 1262,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 217,
+    "redstoneTickDelay": 3,
+    "startTick": 1268,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 218,
+    "redstoneTickDelay": 2,
+    "startTick": 1272,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 219,
+    "redstoneTickDelay": 3,
+    "startTick": 1278,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 220,
+    "redstoneTickDelay": 2,
+    "startTick": 1282,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 221,
+    "redstoneTickDelay": 3,
+    "startTick": 1288,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 222,
+    "redstoneTickDelay": 3,
+    "startTick": 1294,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 223,
+    "redstoneTickDelay": 2,
+    "startTick": 1298,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 224,
+    "redstoneTickDelay": 3,
+    "startTick": 1304,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 225,
+    "redstoneTickDelay": 2,
+    "startTick": 1308,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 226,
+    "redstoneTickDelay": 3,
+    "startTick": 1314,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 227,
+    "redstoneTickDelay": 3,
+    "startTick": 1320,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 228,
+    "redstoneTickDelay": 1,
+    "startTick": 1322,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 229,
+    "redstoneTickDelay": 1,
+    "startTick": 1324,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 230,
+    "redstoneTickDelay": 3,
+    "startTick": 1330,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 231,
+    "redstoneTickDelay": 2,
+    "startTick": 1334,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 232,
+    "redstoneTickDelay": 3,
+    "startTick": 1340,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 233,
+    "redstoneTickDelay": 1,
+    "startTick": 1342,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 234,
+    "redstoneTickDelay": 2,
+    "startTick": 1346,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 235,
+    "redstoneTickDelay": 2,
+    "startTick": 1350,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 236,
+    "redstoneTickDelay": 3,
+    "startTick": 1356,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 237,
+    "redstoneTickDelay": 3,
+    "startTick": 1362,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 238,
+    "redstoneTickDelay": 1,
+    "startTick": 1364,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 239,
+    "redstoneTickDelay": 1,
+    "startTick": 1366,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 240,
+    "redstoneTickDelay": 3,
+    "startTick": 1372,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 241,
+    "redstoneTickDelay": 2,
+    "startTick": 1376,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 242,
+    "redstoneTickDelay": 3,
+    "startTick": 1382,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 243,
+    "redstoneTickDelay": 3,
+    "startTick": 1388,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 244,
+    "redstoneTickDelay": 1,
+    "startTick": 1390,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 245,
+    "redstoneTickDelay": 1,
+    "startTick": 1392,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 246,
+    "redstoneTickDelay": 1,
+    "startTick": 1394,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 247,
+    "redstoneTickDelay": 2,
+    "startTick": 1398,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 248,
+    "redstoneTickDelay": 2,
+    "startTick": 1402,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 249,
+    "redstoneTickDelay": 2,
+    "startTick": 1406,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 250,
+    "redstoneTickDelay": 1,
+    "startTick": 1408,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 251,
+    "redstoneTickDelay": 3,
+    "startTick": 1414,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 252,
+    "redstoneTickDelay": 2,
+    "startTick": 1418,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 253,
+    "redstoneTickDelay": 3,
+    "startTick": 1424,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 254,
+    "redstoneTickDelay": 1,
+    "startTick": 1426,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 255,
+    "redstoneTickDelay": 1,
+    "startTick": 1428,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 256,
+    "redstoneTickDelay": 3,
+    "startTick": 1434,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 257,
+    "redstoneTickDelay": 3,
+    "startTick": 1440,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 258,
+    "redstoneTickDelay": 2,
+    "startTick": 1444,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 259,
+    "redstoneTickDelay": 2,
+    "startTick": 1448,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 260,
+    "redstoneTickDelay": 1,
+    "startTick": 1450,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 261,
+    "redstoneTickDelay": 2,
+    "startTick": 1454,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 262,
+    "redstoneTickDelay": 3,
+    "startTick": 1460,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 263,
+    "redstoneTickDelay": 3,
+    "startTick": 1466,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 264,
+    "redstoneTickDelay": 2,
+    "startTick": 1470,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 265,
+    "redstoneTickDelay": 3,
+    "startTick": 1476,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 266,
+    "redstoneTickDelay": 1,
+    "startTick": 1478,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 267,
+    "redstoneTickDelay": 2,
+    "startTick": 1482,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 268,
+    "redstoneTickDelay": 2,
+    "startTick": 1486,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 269,
+    "redstoneTickDelay": 1,
+    "startTick": 1488,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 270,
+    "redstoneTickDelay": 2,
+    "startTick": 1492,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 271,
+    "redstoneTickDelay": 2,
+    "startTick": 1496,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 272,
+    "redstoneTickDelay": 3,
+    "startTick": 1502,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 273,
+    "redstoneTickDelay": 3,
+    "startTick": 1508,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 274,
+    "redstoneTickDelay": 1,
+    "startTick": 1510,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 275,
+    "redstoneTickDelay": 1,
+    "startTick": 1512,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 276,
+    "redstoneTickDelay": 3,
+    "startTick": 1518,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 277,
+    "redstoneTickDelay": 2,
+    "startTick": 1522,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 278,
+    "redstoneTickDelay": 3,
+    "startTick": 1528,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 279,
+    "redstoneTickDelay": 1,
+    "startTick": 1530,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 280,
+    "redstoneTickDelay": 2,
+    "startTick": 1534,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 281,
+    "redstoneTickDelay": 2,
+    "startTick": 1538,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 282,
+    "redstoneTickDelay": 3,
+    "startTick": 1544,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 283,
+    "redstoneTickDelay": 2,
+    "startTick": 1548,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 284,
+    "redstoneTickDelay": 3,
+    "startTick": 1554,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 285,
+    "redstoneTickDelay": 1,
+    "startTick": 1556,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 286,
+    "redstoneTickDelay": 2,
+    "startTick": 1560,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 287,
+    "redstoneTickDelay": 1,
+    "startTick": 1562,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 288,
+    "redstoneTickDelay": 1,
+    "startTick": 1564,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 289,
+    "redstoneTickDelay": 3,
+    "startTick": 1570,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 290,
+    "redstoneTickDelay": 1,
+    "startTick": 1572,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 291,
+    "redstoneTickDelay": 1,
+    "startTick": 1574,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 292,
+    "redstoneTickDelay": 3,
+    "startTick": 1580,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 293,
+    "redstoneTickDelay": 3,
+    "startTick": 1586,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 294,
+    "redstoneTickDelay": 2,
+    "startTick": 1590,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 295,
+    "redstoneTickDelay": 2,
+    "startTick": 1594,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 296,
+    "redstoneTickDelay": 1,
+    "startTick": 1596,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 297,
+    "redstoneTickDelay": 3,
+    "startTick": 1602,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 298,
+    "redstoneTickDelay": 2,
+    "startTick": 1606,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 299,
+    "redstoneTickDelay": 3,
+    "startTick": 1612,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 300,
+    "redstoneTickDelay": 1,
+    "startTick": 1614,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 301,
+    "redstoneTickDelay": 1,
+    "startTick": 1616,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 302,
+    "redstoneTickDelay": 3,
+    "startTick": 1622,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 303,
+    "redstoneTickDelay": 3,
+    "startTick": 1628,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 304,
+    "redstoneTickDelay": 5,
+    "startTick": 1638,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D",
+        "note": 8,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 4,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 305,
+    "redstoneTickDelay": 5,
+    "startTick": 1648,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 306,
+    "redstoneTickDelay": 5,
+    "startTick": 1658,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 307,
+    "redstoneTickDelay": 5,
+    "startTick": 1668,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 308,
+    "redstoneTickDelay": 3,
+    "startTick": 1674,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 309,
+    "redstoneTickDelay": 3,
+    "startTick": 1680,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 310,
+    "redstoneTickDelay": 2,
+    "startTick": 1684,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 311,
+    "redstoneTickDelay": 3,
+    "startTick": 1690,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 312,
+    "redstoneTickDelay": 2,
+    "startTick": 1694,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 313,
+    "redstoneTickDelay": 3,
+    "startTick": 1700,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 314,
+    "redstoneTickDelay": 3,
+    "startTick": 1706,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 315,
+    "redstoneTickDelay": 2,
+    "startTick": 1710,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 316,
+    "redstoneTickDelay": 3,
+    "startTick": 1716,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 317,
+    "redstoneTickDelay": 3,
+    "startTick": 1722,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 318,
+    "redstoneTickDelay": 2,
+    "startTick": 1726,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 319,
+    "redstoneTickDelay": 3,
+    "startTick": 1732,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 320,
+    "redstoneTickDelay": 2,
+    "startTick": 1736,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 321,
+    "redstoneTickDelay": 3,
+    "startTick": 1742,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 322,
+    "redstoneTickDelay": 3,
+    "startTick": 1748,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 323,
+    "redstoneTickDelay": 1,
+    "startTick": 1750,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 324,
+    "redstoneTickDelay": 1,
+    "startTick": 1752,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 325,
+    "redstoneTickDelay": 3,
+    "startTick": 1758,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 326,
+    "redstoneTickDelay": 2,
+    "startTick": 1762,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 327,
+    "redstoneTickDelay": 3,
+    "startTick": 1768,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 328,
+    "redstoneTickDelay": 3,
+    "startTick": 1774,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 329,
+    "redstoneTickDelay": 2,
+    "startTick": 1778,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 330,
+    "redstoneTickDelay": 3,
+    "startTick": 1784,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 331,
+    "redstoneTickDelay": 2,
+    "startTick": 1788,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 332,
+    "redstoneTickDelay": 3,
+    "startTick": 1794,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 333,
+    "redstoneTickDelay": 3,
+    "startTick": 1800,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 334,
+    "redstoneTickDelay": 2,
+    "startTick": 1804,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 335,
+    "redstoneTickDelay": 3,
+    "startTick": 1810,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 336,
+    "redstoneTickDelay": 2,
+    "startTick": 1814,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 337,
+    "redstoneTickDelay": 3,
+    "startTick": 1820,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 338,
+    "redstoneTickDelay": 3,
+    "startTick": 1826,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 339,
+    "redstoneTickDelay": 2,
+    "startTick": 1830,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 340,
+    "redstoneTickDelay": 3,
+    "startTick": 1836,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 341,
+    "redstoneTickDelay": 3,
+    "startTick": 1842,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 342,
+    "redstoneTickDelay": 2,
+    "startTick": 1846,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 343,
+    "redstoneTickDelay": 3,
+    "startTick": 1852,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 344,
+    "redstoneTickDelay": 2,
+    "startTick": 1856,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 345,
+    "redstoneTickDelay": 3,
+    "startTick": 1862,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 346,
+    "redstoneTickDelay": 3,
+    "startTick": 1868,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 347,
+    "redstoneTickDelay": 2,
+    "startTick": 1872,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 348,
+    "redstoneTickDelay": 3,
+    "startTick": 1878,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 349,
+    "redstoneTickDelay": 2,
+    "startTick": 1882,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 350,
+    "redstoneTickDelay": 3,
+    "startTick": 1888,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 351,
+    "redstoneTickDelay": 3,
+    "startTick": 1894,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 352,
+    "redstoneTickDelay": 2,
+    "startTick": 1898,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 353,
+    "redstoneTickDelay": 3,
+    "startTick": 1904,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 354,
+    "redstoneTickDelay": 2,
+    "startTick": 1908,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 355,
+    "redstoneTickDelay": 3,
+    "startTick": 1914,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 356,
+    "redstoneTickDelay": 1,
+    "startTick": 1916,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 357,
+    "redstoneTickDelay": 2,
+    "startTick": 1920,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 358,
+    "redstoneTickDelay": 2,
+    "startTick": 1924,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 359,
+    "redstoneTickDelay": 3,
+    "startTick": 1930,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 360,
+    "redstoneTickDelay": 2,
+    "startTick": 1934,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 361,
+    "redstoneTickDelay": 3,
+    "startTick": 1940,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 362,
+    "redstoneTickDelay": 3,
+    "startTick": 1946,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 363,
+    "redstoneTickDelay": 2,
+    "startTick": 1950,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 364,
+    "redstoneTickDelay": 3,
+    "startTick": 1956,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 2,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 365,
+    "redstoneTickDelay": 3,
+    "startTick": 1962,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 366,
+    "redstoneTickDelay": 2,
+    "startTick": 1966,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 367,
+    "redstoneTickDelay": 3,
+    "startTick": 1972,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 368,
+    "redstoneTickDelay": 2,
+    "startTick": 1976,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 369,
+    "redstoneTickDelay": 3,
+    "startTick": 1982,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 370,
+    "redstoneTickDelay": 3,
+    "startTick": 1988,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 371,
+    "redstoneTickDelay": 2,
+    "startTick": 1992,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 372,
+    "redstoneTickDelay": 3,
+    "startTick": 1998,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 9,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 373,
+    "redstoneTickDelay": 2,
+    "startTick": 2002,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 374,
+    "redstoneTickDelay": 3,
+    "startTick": 2008,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 375,
+    "redstoneTickDelay": 3,
+    "startTick": 2014,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 376,
+    "redstoneTickDelay": 2,
+    "startTick": 2018,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 377,
+    "redstoneTickDelay": 3,
+    "startTick": 2024,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 378,
+    "redstoneTickDelay": 2,
+    "startTick": 2028,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 19,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 379,
+    "redstoneTickDelay": 3,
+    "startTick": 2034,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 380,
+    "redstoneTickDelay": 3,
+    "startTick": 2040,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 381,
+    "redstoneTickDelay": 2,
+    "startTick": 2044,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 382,
+    "redstoneTickDelay": 3,
+    "startTick": 2050,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 383,
+    "redstoneTickDelay": 2,
+    "startTick": 2054,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 384,
+    "redstoneTickDelay": 3,
+    "startTick": 2060,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C#",
+        "note": 7,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 385,
+    "redstoneTickDelay": 3,
+    "startTick": 2066,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 386,
+    "redstoneTickDelay": 2,
+    "startTick": 2070,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 387,
+    "redstoneTickDelay": 3,
+    "startTick": 2076,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 388,
+    "redstoneTickDelay": 3,
+    "startTick": 2082,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 0,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 389,
+    "redstoneTickDelay": 2,
+    "startTick": 2086,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 390,
+    "redstoneTickDelay": 3,
+    "startTick": 2092,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 391,
+    "redstoneTickDelay": 2,
+    "startTick": 2096,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 392,
+    "redstoneTickDelay": 3,
+    "startTick": 2102,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 393,
+    "redstoneTickDelay": 3,
+    "startTick": 2108,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 18,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 394,
+    "redstoneTickDelay": 2,
+    "startTick": 2112,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 395,
+    "redstoneTickDelay": 3,
+    "startTick": 2118,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 396,
+    "redstoneTickDelay": 2,
+    "startTick": 2122,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "C",
+        "note": 6,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 397,
+    "redstoneTickDelay": 3,
+    "startTick": 2128,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 398,
+    "redstoneTickDelay": 5,
+    "startTick": 2138,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 23,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F",
+        "note": 11,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 399,
+    "redstoneTickDelay": 2,
+    "startTick": 2142,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 13,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G",
+        "note": 1,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 400,
+    "redstoneTickDelay": 2,
+    "startTick": 2146,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 3,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 401,
+    "redstoneTickDelay": 1,
+    "startTick": 2148,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "D#",
+        "note": 21,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 17,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 402,
+    "redstoneTickDelay": 3,
+    "startTick": 2154,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 403,
+    "redstoneTickDelay": 3,
+    "startTick": 2160,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "F#",
+        "note": 24,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A#",
+        "note": 16,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "B",
+        "note": 5,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 404,
+    "redstoneTickDelay": 2,
+    "startTick": 2164,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "A",
+        "note": 15,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 405,
+    "redstoneTickDelay": 3,
+    "startTick": 2170,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 22,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "G#",
+        "note": 14,
+        "instrument": "harp",
+        "trackName": "Piano"
+      },
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  },
+  {
+    "group_index": 406,
+    "redstoneTickDelay": 16,
+    "startTick": 2202,
+    "chords": [
+      {
+        "block": "minecraft:dirt",
+        "pitch": "E",
+        "note": 10,
+        "instrument": "harp",
+        "trackName": "Piano"
+      }
+    ]
+  }
+]

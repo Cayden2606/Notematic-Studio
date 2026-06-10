@@ -1,0 +1,3092 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notematic Studio</title>
+  <meta name="description"
+    content="Convert MIDI files into Minecraft noteblock litematic schematics with visual preview and audio playback.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+       ============================================================ */
+    :root {
+      /* Minecraft.net core palette */
+      --mc-green-6: #2a641c;
+      --mc-green-5: #3c8527;
+      --mc-green-4: #52a535;
+      --mc-green-3: #6cc349;
+      --mc-green-2: #86d562;
+      --mc-green-1: #a0e081;
+      --mc-grey-6: #262423;
+      --mc-grey-5: #3d3938;
+      --mc-grey-4: #6b6562;
+      --mc-grey-3: #aba09c;
+      --mc-grey-2: #d0c5c0;
+      --mc-grey-1: #ede5e2;
+      --mc-rich-black: #000;
+      --mc-off-black: #171615;
+      --mc-white: #fff;
+      --mc-off-white: #fcf5f1;
+      --mc-gradient-green: linear-gradient(180deg, #6cc349, #52a535 50%, #3c8527);
+      --mc-gradient-dark-grey: linear-gradient(180deg, #3d3938, #262423 50%, #171615);
+      --mc-gradient-light-grey: linear-gradient(180deg, #fcf5f1, #ede5e2 50%, #d0c5c0);
+
+      --bg-deep: #171615;
+      --bg-panel: #262423;
+      --bg-card: #262423;
+      --bg-surface: #3d3938;
+      --bg-input: #3d3938;
+      --accent-emerald: #6cc349;
+      --accent-diamond: #86d562;
+      --accent-gold: #ffc42b;
+      --accent-redstone: #da3a16;
+      --accent-lapis: #52a535;
+      --text-primary: #fcf5f1;
+      --text-secondary: #d0c5c0;
+      --text-muted: #aba09c;
+      --border-color: #3d3938;
+      --border-glow: rgba(108, 195, 73, 0.35);
+      --font-pixel: 'Silkscreen', 'MinecraftTen', cursive;
+      --font-body: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --radius: 0px;
+      --radius-lg: 0px;
+      --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.45);
+      --shadow-glow: 0 0 20px rgba(108, 195, 73, 0.15);
+      --transition: 200ms ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: var(--bg-deep);
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(61, 57, 56, 0.6) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(108, 195, 73, 0.10) 0%, transparent 42%),
+        radial-gradient(ellipse at 50% 100%, rgba(82, 165, 53, 0.08) 0%, transparent 42%);
+      line-height: 1.6;
+    }
+
+    img.pixelated {
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      /* Fallback for older browser versions */
+    }
+
+    /* ============================================================
+       SCROLLBAR
+       ============================================================ */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-deep);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-emerald);
+    }
+
+    /* ============================================================
+       LAYOUT
+       ============================================================ */
+    .app-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .app-header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      position: relative;
+    }
+
+    .app-header h1 {
+      font-family: var(--font-pixel);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      background: linear-gradient(135deg, var(--accent-emerald), var(--accent-diamond));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .app-header .subtitle {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .header-decoration {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .header-decoration span {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      animation: pulse-block 2s ease-in-out infinite;
+    }
+
+    .header-decoration span:nth-child(1) {
+      background: var(--accent-emerald);
+      animation-delay: 0s;
+    }
+
+    .header-decoration span:nth-child(2) {
+      background: var(--accent-diamond);
+      animation-delay: 0.2s;
+    }
+
+    .header-decoration span:nth-child(3) {
+      background: var(--accent-gold);
+      animation-delay: 0.4s;
+    }
+
+    .header-decoration span:nth-child(4) {
+      background: var(--accent-redstone);
+      animation-delay: 0.6s;
+    }
+
+    .header-decoration span:nth-child(5) {
+      background: var(--accent-lapis);
+      animation-delay: 0.8s;
+    }
+
+    @keyframes pulse-block {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+
+    /* ============================================================
+       CARDS / PANELS
+       ============================================================ */
+    .card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .card:hover {
+      border-color: rgba(46, 204, 113, 0.2);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 24px;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border-color);
+      font-family: var(--font-pixel);
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      letter-spacing: 0.5px;
+    }
+
+    .card-header .icon {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    /* ============================================================
+       UPLOAD SECTION
+       ============================================================ */
+    #upload-section {
+      margin-bottom: 24px;
+    }
+
+    .dropzone {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--border-color);
+      border-radius: var(--radius);
+      padding: 48px 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      background: linear-gradient(135deg, rgba(46, 204, 113, 0.03), rgba(93, 173, 226, 0.03));
+    }
+
+    .dropzone:hover,
+    .dropzone.dragover {
+      border-color: var(--accent-emerald);
+      background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(93, 173, 226, 0.06));
+      box-shadow: inset 0 0 30px rgba(46, 204, 113, 0.05);
+      transform: translateY(-1px);
+    }
+
+    .dropzone {
+      margin-bottom: 12px;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(46, 204, 113, 0.3));
+    }
+
+    .dropzone strong {
+      display: block;
+      font-family: var(--font-pixel);
+      font-size: 0.9rem;
+      color: var(--accent-emerald);
+      margin-bottom: 8px;
+    }
+
+    .dropzone span {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .file-info {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(46, 204, 113, 0.08);
+      border: 1px solid rgba(46, 204, 113, 0.2);
+      border-radius: var(--radius);
+      display: none;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .file-info.visible {
+      display: flex;
+    }
+
+    .file-info .file-name {
+      color: var(--accent-emerald);
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .file-info .file-size {
+      color: var(--text-muted);
+    }
+
+    .convert-btn {
+      display: none;
+      width: 100%;
+      margin-top: 16px;
+      padding: 14px 24px;
+      font-family: var(--font-pixel);
+      font-size: 0.85rem;
+      color: #fff;
+      background: var(--mc-gradient-dark-grey);
+      border: 2px solid #000;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all var(--transition);
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .convert-btn:hover {
+      background: var(--mc-gradient-green);
+      border-color: var(--mc-green-6);
+      color: var(--mc-rich-black);
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .convert-btn:active {
+      transform: translateY(2px);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .convert-btn.visible {
+      display: block;
+    }
+
+    .options-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .options-label {
+      font-family: var(--font-pixel);
+      font-size: 0.7rem;
+      color: var(--accent-emerald);
+      letter-spacing: 0.5px;
+    }
+
+    .option-toggle {
+      display: flex;
+      gap: 4px;
+    }
+
+    .options-hint {
+      flex-basis: 100%;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .status-bar {
+      min-height: 24px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      transition: all var(--transition);
+    }
+
+    .status-bar.error {
+      color: var(--accent-redstone);
+    }
+
+    .status-bar.success {
+      color: var(--accent-emerald);
+    }
+
+    .status-bar.loading {
+      color: var(--accent-diamond);
+    }
+
+    .loader {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      vertical-align: -2px;
+      border: 2px solid rgba(93, 173, 226, 0.2);
+      border-top-color: var(--accent-diamond);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ============================================================
+       PREVIEW SECTION
+       ============================================================ */
+    #preview-section {
+      display: none;
+      margin-bottom: 24px;
+    }
+
+    #preview-section.visible {
+      display: block;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .instrument-remap {
+      margin-top: 16px;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+    }
+
+    .instrument-remap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .instrument-remap-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .instrument-remap-source {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+      flex: 1;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .instrument-remap-source span:last-child {
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: wrap;
+      line-height: 1;
+    }
+
+    .instrument-remap-arrow {
+      color: var(--accent-diamond);
+      font-family: var(--font-pixel);
+      font-size: 0.7rem;
+      flex: 0 0 auto;
+    }
+
+    .custom-select {
+      flex: 1.2;
+      position: relative;
+      min-width: 0;
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      user-select: none;
+      outline: none;
+    }
+
+    .custom-select-trigger {
+      background: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .custom-select-trigger::after {
+      content: '▼';
+      margin-left: auto;
+      font-family: var(--font-pixel);
+      font-size: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .custom-select-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 100;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-top: 4px;
+    }
+
+    .custom-select.open .custom-select-options {
+      display: block;
+    }
+
+    .custom-select-option {
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .custom-select-option:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .instrument-remap-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .instrument-remap-hint {
+      color: var(--text-muted);
+      font-size: 0.72rem;
+    }
+
+    .summary-stat {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      text-align: center;
+      transition: border-color var(--transition);
+    }
+
+    .summary-stat:hover {
+      border-color: rgba(46, 204, 113, 0.3);
+    }
+
+    .summary-stat .stat-value {
+      font-family: var(--font-pixel);
+      font-size: 1.4rem;
+      color: var(--accent-emerald);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .summary-stat .stat-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       CANVAS VIEWER
+       ============================================================ */
+    .viewer-container {
+      position: relative;
+      background: #100f0e;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .viewer-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .viewer-toolbar .toolbar-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .viewer-toolbar .toolbar-sep {
+      width: 1px;
+      height: 24px;
+      background: var(--border-color);
+      margin: 0 4px;
+    }
+
+    .toolbar-btn {
+      padding: 6px 12px;
+      font-family: var(--font-pixel);
+      font-size: 0.65rem;
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .toolbar-btn:hover {
+      background: rgba(46, 204, 113, 0.15);
+      border-color: var(--accent-emerald);
+    }
+
+    .toolbar-btn.active {
+      background: rgba(46, 204, 113, 0.2);
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+
+    .toolbar-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    .zoom-display {
+      font-family: var(--font-pixel);
+      font-size: 0.65rem;
+      color: var(--accent-diamond);
+      min-width: 40px;
+      text-align: center;
+    }
+
+    #viewer-canvas {
+      display: block;
+      width: 100%;
+      cursor: grab;
+    }
+
+    #viewer-canvas:active {
+      cursor: grabbing;
+    }
+
+    .viewer-scrollbar {
+      height: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .viewer-scrollbar-thumb {
+      position: absolute;
+      top: 2px;
+      height: 8px;
+      background: var(--accent-emerald);
+      border-radius: 4px;
+      opacity: 0.4;
+      cursor: pointer;
+      transition: opacity var(--transition);
+      min-width: 20px;
+    }
+
+    .viewer-scrollbar-thumb:hover {
+      opacity: 0.7;
+    }
+
+    /* ============================================================
+       TOOLTIP
+       ============================================================ */
+    #block-tooltip {
+      position: fixed;
+      pointer-events: none;
+      background: rgba(10, 10, 30, 0.95);
+      border: 1px solid var(--accent-emerald);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 0.78rem;
+      color: var(--text-primary);
+      z-index: 1000;
+      display: none;
+      max-width: 280px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    #block-tooltip.visible {
+      display: block;
+    }
+
+    .tooltip-title {
+      font-family: var(--font-pixel);
+      font-size: 0.7rem;
+      color: var(--accent-emerald);
+      margin-bottom: 6px;
+    }
+
+    .tooltip-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 2px 0;
+    }
+
+    .tooltip-row .label {
+      color: var(--text-muted);
+    }
+
+    .tooltip-row .value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .viewer-wrapper:fullscreen {
+      display: flex !important;
+      flex-direction: column !important;
+      background: var(--bg-deep) !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      height: 100vh !important;
+      width: 100vw !important;
+    }
+
+    .viewer-wrapper:-webkit-full-screen {
+      display: flex !important;
+      flex-direction: column !important;
+      background: var(--bg-deep) !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      height: 100vh !important;
+      width: 100vw !important;
+    }
+
+    .viewer-wrapper:fullscreen .viewer-container {
+      flex: 1 !important;
+      min-height: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .viewer-wrapper:-webkit-full-screen .viewer-container {
+      flex: 1 !important;
+      min-height: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .viewer-wrapper:fullscreen .instrument-remap {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-top: none !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .viewer-wrapper:-webkit-full-screen .instrument-remap {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-top: none !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* ============================================================
+       PLAYBACK CONTROLS
+       ============================================================ */
+    .playback-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .play-btn-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .play-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .play-btn:hover {
+      background: rgba(46, 204, 113, 0.15);
+      border-color: var(--accent-emerald);
+    }
+
+    .play-btn.playing {
+      background: rgba(46, 204, 113, 0.2);
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+
+    .progress-container {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-bar-wrapper {
+      flex: 1;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-emerald), var(--accent-diamond));
+      border-radius: 3px;
+      width: 0%;
+      transition: width 50ms linear;
+    }
+
+    .progress-time {
+      font-family: var(--font-pixel);
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .volume-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .volume-icon {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    #fullscreenIcon {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+
+    .volume-slider {
+      width: 80px;
+      height: 4px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      outline: none;
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .speed-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .speed-select {
+      background: var(--bg-input);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-family: var(--font-pixel);
+      font-size: 0.6rem;
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       LEGEND
+       ============================================================ */
+    .legend-container {
+      margin-top: 16px;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+    }
+
+    .legend-title {
+      font-family: var(--font-pixel);
+      font-size: 0.7rem;
+      color: var(--accent-diamond);
+      margin-bottom: 10px;
+    }
+
+    .legend-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .legend-swatch {
+      width: 5px;
+      height: 21px;
+      border-radius: 3px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    /* ============================================================
+       DOWNLOAD SECTION
+       ============================================================ */
+    #download-section {
+      display: none;
+      margin-bottom: 24px;
+    }
+
+    #download-section.visible {
+      display: block;
+    }
+
+    .download-btn {
+      width: 100%;
+      padding: 16px 24px;
+      font-family: var(--font-pixel);
+      font-size: 0.9rem;
+      color: var(--mc-rich-black);
+      background: var(--mc-gradient-green);
+      border: 2px solid var(--mc-green-6);
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all var(--transition);
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.25), 0 4px 12px rgba(108, 195, 73, 0.25);
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(180deg, #86d562, #6cc349 50%, #52a535);
+      border-color: var(--mc-green-5);
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.3), 0 4px 20px rgba(108, 195, 73, 0.4);
+    }
+
+    .download-btn:active {
+      transform: translateY(2px);
+    }
+
+    .download-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .download-status {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 768px) {
+      .app-container {
+        padding: 12px;
+      }
+
+      .card-body {
+        padding: 16px;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .playback-controls {
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .progress-container {
+        min-width: 150px;
+      }
+    }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.4s ease forwards;
+    }
+
+    /* ============================================================
+       CUSTOM CHECKBOXES
+       ============================================================ */
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .checkbox-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+
+    .checkbox-container input {
+      display: none;
+    }
+
+    .checkbox-custom {
+      width: 16px;
+      height: 16px;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      position: relative;
+      transition: all var(--transition);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .checkbox-container:hover .checkbox-custom {
+      border-color: var(--accent-emerald);
+      box-shadow: 0 0 8px rgba(108, 195, 73, 0.3);
+    }
+
+    .checkbox-container input:checked + .checkbox-custom {
+      background: var(--accent-emerald);
+      border-color: var(--accent-emerald);
+    }
+
+    .checkbox-container input:checked + .checkbox-custom::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 0px;
+      width: 4px;
+      height: 7px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .checkbox-label {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+
+    .checkbox-container:hover .checkbox-label {
+      color: var(--text-primary);
+    }
+
+    .checkbox-container input:checked ~ .checkbox-label {
+      color: var(--accent-emerald);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- HEADER -->
+    <header class="app-header">
+      <h1>⛏ Notematic Studio</h1>
+      <p class="subtitle">Convert MIDI files into Minecraft noteblock schematics (Litematica) with live preview</p>
+      <div class="header-decoration">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </header>
+
+    <!-- UPLOAD SECTION -->
+    <section id="upload-section" class="card animate-in">
+      <div class="card-header">
+        <img class="icon pixelated" src="/static/textures/note_block.png" alt="Note Block"
+          onerror="this.style.display='none'">
+        <span>Upload MIDI File</span>
+      </div>
+      <div class="card-body">
+        <label class="dropzone" id="dropzone">
+          <input id="fileInput" type="file" accept=".mid,.midi,audio/midi,audio/x-midi">
+          <img class="pixelated" src="/static/icons/music.png" alt="Upload Icon" height="40"
+            onerror="this.style.display='none'">
+          <strong>Drop your MIDI file here</strong>
+          <span>or click to browse • .mid / .midi</span>
+        </label>
+
+        <div class="file-info" id="fileInfo">
+          <span>📄</span>
+          <span class="file-name" id="fileName"></span>
+          <span class="file-size" id="fileSize"></span>
+        </div>
+
+        <div class="options-row">
+          <span class="options-label">Tie rounding:</span>
+          <div class="option-toggle">
+            <button class="toolbar-btn active" id="roundUpBtn" data-round="up">Round Up</button>
+            <button class="toolbar-btn" id="roundDownBtn" data-round="down">Round Down</button>
+          </div>
+          <span class="options-hint">How onsets on a half-tick boundary are snapped to the redstone grid.</span>
+        </div>
+
+        <div class="options-row" style="margin-top: 12px; gap: 20px;">
+          <span class="options-label">Advanced:</span>
+          <div class="checkbox-group">
+            <label class="checkbox-container" title="Allows pitches outside Minecraft's standard 2-octave limit.">
+              <input type="checkbox" id="disableOctaveLimit">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Disable Octave Limit</span>
+            </label>
+            <label class="checkbox-container" title="Snaps to 50ms game ticks instead of 100ms redstone ticks.">
+              <input type="checkbox" id="disableTickingLimit">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Disable Ticking Limit</span>
+            </label>
+          </div>
+          <span id="litematicaWarning" class="options-hint" style="color: var(--accent-redstone); display: none; font-weight: bold; width: 100%;">
+            ⚠️ Disabling the ticking limit or octave limit will break the layout and timing in Litematica! Use these options only to get the MP3.
+          </span>
+        </div>
+
+        <button class="convert-btn" id="convertBtn">⚒ Convert to Noteblocks</button>
+        <div class="status-bar" id="status"></div>
+      </div>
+    </section>
+
+    <!-- PREVIEW SECTION -->
+    <section id="preview-section" class="card">
+      <div class="card-header">
+        <img class="icon pixelated" src="/static/textures/Repeaters/repeater-powered-1t.png" alt="Repeater"
+          onerror="this.style.display='none'">
+        <span>Noteblock Pattern Preview</span>
+      </div>
+      <div class="card-body">
+        <!-- Summary stats -->
+        <div class="summary-grid" id="summaryGrid"></div>
+        <div class="viewer-wrapper">
+          <!-- Instrument remapping -->
+          <div class="instrument-remap">
+            <div class="legend-title">Instrument Remap</div>
+            <div class="instrument-remap-grid" id="instrumentRemapGrid"></div>
+            <div class="instrument-remap-footer">
+              <div class="instrument-remap-hint">Change any source instrument here. Preview, playback, and export update
+                from the remapped data.</div>
+              <button class="toolbar-btn" id="resetInstrumentMapBtn">Reset Mappings</button>
+            </div>
+          </div>
+
+
+          <!-- Canvas viewer -->
+          <div class="viewer-container">
+            <div class="viewer-toolbar">
+              <div class="toolbar-group">
+                <span class="toolbar-label">Layer:</span>
+                <button class="toolbar-btn active" id="layerBlocks" data-layer="blocks">Blocks</button>
+                <button class="toolbar-btn" id="layerSupport" data-layer="support">Support</button>
+              </div>
+              <div class="toolbar-sep"></div>
+              <div class="toolbar-group">
+                <span class="toolbar-label">Zoom:</span>
+                <button class="toolbar-btn" id="zoomOut">-</button>
+                <span class="zoom-display" id="zoomDisplay">2x</span>
+                <button class="toolbar-btn" id="zoomIn">+</button>
+              </div>
+              <div class="toolbar-sep"></div>
+              <div class="toolbar-group">
+                <button class="toolbar-btn" id="fitBtn">Fit View</button>
+                <button class="toolbar-btn" id="centerYBtn">Center ↕</button>
+                <button class="toolbar-btn" id="resetViewBtn">Reset</button>
+              </div>
+            </div>
+            <canvas id="viewer-canvas" height="400"></canvas>
+            <div class="viewer-scrollbar" id="viewerScrollbar">
+              <div class="viewer-scrollbar-thumb" id="scrollThumb"></div>
+            </div>
+          </div>
+
+          <!-- Playback controls -->
+          <div class="playback-controls">
+            <div class="play-btn-group">
+              <button class="play-btn" id="playPauseBtn" title="Play"><img class="pixelated" id="playPauseIcon"
+                  src="/static/icons/play.png" alt="Play" height="20"></button>
+              <button class="play-btn" id="stopBtn" title="Stop"><img class="pixelated" src="/static/icons/stop.png"
+                  alt="Stop" height="20"></button>
+            </div>
+
+            <div class="progress-container">
+              <span class="progress-time" id="currentTime">0:00</span>
+              <div class="progress-bar-wrapper" id="progressBar">
+                <div class="progress-bar-fill" id="progressFill"></div>
+              </div>
+              <span class="progress-time" id="totalTime">0:00</span>
+            </div>
+
+            <div class="speed-group">
+              <span class="toolbar-label">Speed:</span>
+              <select class="speed-select" id="speedSelect">
+                <option value="0.25">0.25x</option>
+                <option value="0.5">0.5x</option>
+                <option value="0.75">0.75x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+            </div>
+
+            <div class="volume-group">
+              <img class="volume-icon pixelated" id="volumeIcon" src="/static/icons/volume_loud.png" alt="Volume"
+                onerror="this.style.display='none'">
+              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.7">
+            </div>
+            <button class="play-btn" id="fullscreenBtn" title="Fullscreen"><img class="pixelated" id="fullscreenIcon"
+                src="/static/icons/max.png" alt="Fullscreen" onerror="this.style.display='none'"></button>
+
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend-container">
+          <div class="legend-title">Instrument Colors</div>
+          <div class="legend-grid" id="legendGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section id="download-section" class="card">
+      <div class="card-header">
+        <span>📦</span>
+        <span>Export to Litematica</span>
+      </div>
+      <div class="card-body">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button class="download-btn" id="downloadBtn" style="flex:1;">⬇ Download .litematic</button>
+          <button class="download-btn" id="downloadMp3Btn" title="Download MP3" style="flex: none; width:140px; height: 56px; padding:12px 14px; font-size:0.85rem;
+            display:flex; align-items:center; gap:8px; justify-content:center;">⬇ MP3</button>
+        </div>
+        <div class="download-status" id="downloadStatus"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tooltip -->
+  <div id="block-tooltip">
+    <div class="tooltip-title" id="tooltipTitle"></div>
+    <div id="tooltipContent"></div>
+  </div>
+
+  <script>
+    /* ==========================================================
+       INSTRUMENT COLORS — matches Minecraft noteblock particle
+       ========================================================== */
+    const INSTRUMENT_COLORS = {
+      harp: { bg: '#4CAF50', label: 'Harp/Piano', icon: 'harp' },
+      bass: { bg: '#8B4513', label: 'Bass', icon: 'bass' },
+      basedrum: { bg: '#666666', label: 'Bass Drum', icon: 'bass_drum' },
+      snare: { bg: '#DAA520', label: 'Snare', icon: 'snare_drum' },
+      hat: { bg: '#87CEEB', label: 'Hi-Hat', icon: 'sticks' },
+      bell: { bg: '#FFD700', label: 'Bell', icon: 'glockenspiel' },
+      chime: { bg: '#E0FFFF', label: 'Chime', icon: 'chimes' },
+      xylophone: { bg: '#F0E68C', label: 'Xylophone', icon: 'xylophone' },
+      iron_xylophone: { bg: '#C0C0C0', label: 'Iron Xylophone', icon: 'vibraphone' },
+      guitar: { bg: '#DEB887', label: 'Guitar', icon: 'guitar' },
+      flute: { bg: '#98FB98', label: 'Flute', icon: 'flute' },
+      cow_bell: { bg: '#A0522D', label: 'Cow Bell', icon: 'cow_bell' },
+      didgeridoo: { bg: '#FF8C00', label: 'Didgeridoo', icon: 'didgeridoo' },
+      bit: { bg: '#00FF7F', label: 'Bit/Square', icon: 'bit' },
+      banjo: { bg: '#F4A460', label: 'Banjo', icon: 'banjo' },
+      pling: { bg: '#FF69B4', label: 'Pling', icon: 'electric_piano' },
+      trumpet: { bg: '#FFD700', label: 'Trumpet', icon: 'trumpet' },
+      trumpet_exposed: { bg: '#E6B74D', label: 'Exposed Trumpet', icon: 'trumpet' },
+      trumpet_weathered: { bg: '#C9863A', label: 'Weathered Trumpet', icon: 'trombone' },
+      trumpet_oxidized: { bg: '#9E7B57', label: 'Oxidized Trumpet', icon: 'trombone' },
+    };
+
+    /* Map support block IDs to short labels */
+    const BLOCK_LABELS = {
+      'minecraft:dirt': 'Dirt',
+      'minecraft:oak_planks': 'Oak Planks',
+      'minecraft:white_wool': 'Wool',
+      'minecraft:pumpkin': 'Pumpkin',
+      'minecraft:clay': 'Clay',
+      'minecraft:iron_block': 'Iron',
+      'minecraft:emerald_block': 'Emerald',
+      'minecraft:hay_block': 'Hay',
+      'minecraft:glowstone': 'Glowstone',
+      'minecraft:soul_sand': 'Soul Sand',
+      'minecraft:gold_block': 'Gold',
+      'minecraft:packed_ice': 'Packed Ice',
+      'minecraft:bone_block': 'Bone',
+      'minecraft:sand': 'Sand',
+      'minecraft:glass': 'Glass',
+      'minecraft:stone': 'Stone',
+      'minecraft:copper_block': 'Copper',
+      'minecraft:exposed_copper': 'Exposed Copper',
+      'minecraft:weathered_copper': 'Weathered Copper',
+      'minecraft:oxidized_copper': 'Oxidized Copper',
+      'minecraft:cut_copper': 'Cut Copper',
+      'minecraft:exposed_cut_copper': 'Exposed Cut Copper',
+      'minecraft:weathered_cut_copper': 'Weathered Cut Copper',
+      'minecraft:oxidized_cut_copper': 'Oxidized Cut Copper',
+      'minecraft:chiseled_copper': 'Chiseled Copper',
+      'minecraft:exposed_chiseled_copper': 'Exposed Chiseled Copper',
+      'minecraft:weathered_chiseled_copper': 'Weathered Chiseled Copper',
+      'minecraft:oxidized_chiseled_copper': 'Oxidized Chiseled Copper',
+    };
+
+    /* Map block IDs to texture filenames */
+    const BLOCK_TEXTURES = {
+      'minecraft:dirt': 'dirt',
+      'minecraft:oak_planks': 'oak_planks',
+      'minecraft:white_wool': 'white_wool',
+      'minecraft:pumpkin': 'pumpkin_top',
+      'minecraft:clay': 'clay',
+      'minecraft:iron_block': 'iron_block',
+      'minecraft:emerald_block': 'emerald_block',
+      'minecraft:hay_block': 'hay_block_top',
+      'minecraft:glowstone': 'glowstone',
+      'minecraft:soul_sand': 'soul_sand',
+      'minecraft:gold_block': 'gold_block',
+      'minecraft:packed_ice': 'packed_ice',
+      'minecraft:bone_block': 'bone_block_top',
+      'minecraft:sand': 'sand',
+      'minecraft:glass': 'glass',
+      'minecraft:stone': 'stone',
+      'minecraft:copper_block': 'copper_block',
+      'minecraft:exposed_copper': 'exposed-copper',
+      'minecraft:weathered_copper': 'weathered-copper',
+      'minecraft:oxidized_copper': 'oxidized-copper',
+      'minecraft:cut_copper': 'copper_block',
+      'minecraft:exposed_cut_copper': 'copper_block',
+      'minecraft:weathered_cut_copper': 'copper_block',
+      'minecraft:oxidized_cut_copper': 'copper_block',
+      'minecraft:chiseled_copper': 'copper_block',
+      'minecraft:exposed_chiseled_copper': 'copper_block',
+      'minecraft:weathered_chiseled_copper': 'copper_block',
+      'minecraft:oxidized_chiseled_copper': 'copper_block',
+    };
+
+    const SOUND_FILE_ALIASES = {
+      basedrum: 'bd',
+      chime: 'icechime',
+      xylophone: 'xylobone',
+    };
+
+    const PITCH_NAMES = ['F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F'];
+    const INSTRUMENT_ORDER = Object.keys(INSTRUMENT_COLORS);
+    const INSTRUMENT_BLOCKS = {
+      bass: 'minecraft:oak_planks',
+      didgeridoo: 'minecraft:pumpkin',
+      guitar: 'minecraft:white_wool',
+      harp: 'minecraft:dirt',
+      iron_xylophone: 'minecraft:iron_block',
+      bit: 'minecraft:emerald_block',
+      banjo: 'minecraft:hay_block',
+      pling: 'minecraft:glowstone',
+      flute: 'minecraft:clay',
+      cow_bell: 'minecraft:soul_sand',
+      bell: 'minecraft:gold_block',
+      chime: 'minecraft:packed_ice',
+      xylophone: 'minecraft:bone_block',
+      snare: 'minecraft:sand',
+      hat: 'minecraft:glass',
+      basedrum: 'minecraft:stone',
+      trumpet: 'minecraft:copper_block',
+      trumpet_exposed: 'minecraft:exposed_copper',
+      trumpet_weathered: 'minecraft:weathered_copper',
+      trumpet_oxidized: 'minecraft:oxidized_copper',
+    };
+
+    /* ==========================================================
+       STATE
+       ========================================================== */
+    let currentFile = null;
+    let songData = null;     // { stem, groups, summary }
+    let activeSongData = null; // derived song data with remaps applied
+    let instrumentRemap = {};  // source instrument -> target instrument
+    let layoutData = null;   // computed grid layout
+    let remapPlaybackSyncToken = 0;
+
+    /* ==========================================================
+       TEXTURE CACHE
+       ========================================================== */
+    const textureCache = {};
+    const textureLoadPromises = {};
+
+    function repeaterTextureName(delay, powered) {
+      const clampedDelay = Math.min(4, Math.max(1, parseInt(delay, 10) || 1));
+      return `Repeaters/repeater-${powered ? 'powered' : 'unpowered'}-${clampedDelay}t`;
+    }
+
+    function dustTextureName(shape, powered) {
+      return `Redstone_Dust/redstone_dust_${shape}-${powered ? 'powered' : 'unpowered'}`;
+    }
+
+    function dustShapeForIndex(index, count, forceCrossMiddle = false) {
+      if (index === 0) return 'top';
+      if (index === count - 1) return 'bottom';
+      if (forceCrossMiddle) {
+        const middleIndex = (count % 2 === 0) ? ((count / 2) - 1) : Math.floor(count / 2);
+        if (index === middleIndex) return 'cross';
+      }
+      return 'T';
+    }
+
+    function loadTexture(name) {
+      if (textureCache[name]) return Promise.resolve(textureCache[name]);
+      if (textureLoadPromises[name]) return textureLoadPromises[name];
+      textureLoadPromises[name] = new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => { textureCache[name] = img; resolve(img); };
+        img.onerror = () => { resolve(null); };
+        img.src = `/static/textures/${name}.png`;
+      });
+      return textureLoadPromises[name];
+    }
+
+    async function preloadTextures() {
+      const needed = [
+        'note_block',
+        'stone',
+        ...Object.values(BLOCK_TEXTURES),
+        'Repeaters/repeater-powered-1t',
+        'Repeaters/repeater-powered-2t',
+        'Repeaters/repeater-powered-3t',
+        'Repeaters/repeater-powered-4t',
+        'Repeaters/repeater-unpowered-1t',
+        'Repeaters/repeater-unpowered-2t',
+        'Repeaters/repeater-unpowered-3t',
+        'Repeaters/repeater-unpowered-4t',
+        'Redstone_Dust/redstone_dust_cross-powered',
+        'Redstone_Dust/redstone_dust_cross-unpowered',
+        'Redstone_Dust/redstone_dust_T-powered',
+        'Redstone_Dust/redstone_dust_T-unpowered',
+        'Redstone_Dust/redstone_dust_top-powered',
+        'Redstone_Dust/redstone_dust_top-unpowered',
+        'Redstone_Dust/redstone_dust_bottom-powered',
+        'Redstone_Dust/redstone_dust_bottom-unpowered',
+      ];
+      await Promise.all(needed.map(loadTexture));
+    }
+
+    /* ==========================================================
+       DOM REFS
+       ========================================================== */
+    const $ = id => document.getElementById(id);
+    const dropzone = $('dropzone');
+    const fileInput = $('fileInput');
+    const fileInfo = $('fileInfo');
+    const fileName = $('fileName');
+    const fileSize = $('fileSize');
+    const convertBtn = $('convertBtn');
+    const status = $('status');
+    const previewSection = $('preview-section');
+    const downloadSection = $('download-section');
+    const summaryGrid = $('summaryGrid');
+    const instrumentRemapGrid = $('instrumentRemapGrid');
+    const resetInstrumentMapBtn = $('resetInstrumentMapBtn');
+    const canvas = $('viewer-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function instrumentMeta(instrument) {
+      return INSTRUMENT_COLORS[instrument] || { bg: '#888', label: instrument, icon: 'music' };
+    }
+
+    function instrumentIconUrl(meta) {
+      if (meta.icon === 'music') {
+        return '/static/icons/music.png';
+      }
+      return `/static/icons/instruments/${meta.icon || 'music'}.png`;
+    }
+
+    function instrumentSupportBlock(instrument) {
+      return INSTRUMENT_BLOCKS[instrument] || 'minecraft:dirt';
+    }
+
+    function remapInstrument(instrument) {
+      return instrumentRemap[instrument] || instrument;
+    }
+
+    function cloneGroupsWithInstrumentRemap(groups) {
+      return (groups || []).map((group) => ({
+        ...group,
+        chords: (group.chords || []).map((chord) => {
+          const remappedInstrument = remapInstrument(chord.instrument);
+          return {
+            ...chord,
+            instrument: remappedInstrument,
+            block: instrumentSupportBlock(remappedInstrument),
+          };
+        }),
+      }));
+    }
+
+    function buildActiveSummary(activeGroups) {
+      const instrumentsUsed = new Set();
+      for (const group of activeGroups) {
+        for (const chord of (group.chords || [])) {
+          if (chord.instrument) instrumentsUsed.add(chord.instrument);
+        }
+      }
+      return {
+        ...songData.summary,
+        instruments_used: [...instrumentsUsed].sort(),
+      };
+    }
+
+    function rebuildActiveSongData() {
+      if (!songData) {
+        activeSongData = null;
+        return null;
+      }
+      const groups = cloneGroupsWithInstrumentRemap(songData.groups);
+      activeSongData = {
+        stem: songData.stem,
+        groups,
+        summary: buildActiveSummary(groups),
+      };
+      return activeSongData;
+    }
+
+    function getActiveSongData() {
+      return activeSongData || rebuildActiveSongData();
+    }
+
+    function renderInstrumentRemapControls() {
+      if (!instrumentRemapGrid || !songData) return;
+
+      const sourceInstruments = songData.summary?.instruments_used || [];
+      instrumentRemapGrid.innerHTML = '';
+
+      // Close all custom selects when clicking outside
+      document.addEventListener('click', () => {
+        document.querySelectorAll('.custom-select').forEach(el => el.classList.remove('open'));
+      });
+
+      for (const source of sourceInstruments) {
+        const meta = instrumentMeta(source);
+        const iconUrl = instrumentIconUrl(meta);
+        const row = document.createElement('div');
+        row.className = 'instrument-remap-row';
+        row.innerHTML = `
+          <div class="instrument-remap-source">
+            <span class="legend-swatch" style="background:${meta.bg}"></span>
+            <img class="pixelated" src="${iconUrl}" style="width:15px; height:15px; vertical-align:middle; margin-right:5px; margin-left:5px;">
+            <span style="font-family: 'silkscreen'">${meta.label}</span>
+          </div>
+          <span class="instrument-remap-arrow">→</span>
+          <div class="custom-select" tabindex="0">
+            <select class="instrument-remap-select" data-source="${source}" style="display:none;"></select>
+            <div class="custom-select-trigger"></div>
+            <div class="custom-select-options"></div>
+          </div>
+        `;
+
+        const select = row.querySelector('select');
+        const customSelect = row.querySelector('.custom-select');
+        const trigger = row.querySelector('.custom-select-trigger');
+        const optionsContainer = row.querySelector('.custom-select-options');
+
+        const getInstHTML = (inst) => {
+          const m = instrumentMeta(inst);
+          const url = instrumentIconUrl(m);
+          return `<span class="legend-swatch" style="background:${m.bg}"></span>
+                  <img class="pixelated" src="${url}" style="width:15px; height:15px; vertical-align:middle; margin-right:5px; margin-left:5px;">
+                  <span style="font-family: 'silkscreen'; font-size: 0.75rem;">${m.label}</span>`;
+        };
+
+        for (const instrument of INSTRUMENT_ORDER) {
+          const option = document.createElement('option');
+          option.value = instrument;
+          select.appendChild(option);
+
+          const customOption = document.createElement('div');
+          customOption.className = 'custom-select-option';
+          customOption.innerHTML = getInstHTML(instrument);
+          customOption.dataset.value = instrument;
+
+          customOption.addEventListener('click', (e) => {
+            e.stopPropagation();
+            select.value = instrument;
+            trigger.innerHTML = getInstHTML(instrument);
+            customSelect.classList.remove('open');
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+          });
+
+          optionsContainer.appendChild(customOption);
+        }
+
+        const initialValue = instrumentRemap[source] || source;
+        select.value = initialValue;
+        trigger.innerHTML = getInstHTML(initialValue);
+
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          document.querySelectorAll('.custom-select').forEach(el => {
+            if (el !== customSelect) el.classList.remove('open');
+          });
+          customSelect.classList.toggle('open');
+        });
+
+        // Use blur instead of only document.click
+        customSelect.addEventListener('blur', () => {
+          customSelect.classList.remove('open');
+        });
+
+        instrumentRemapGrid.appendChild(row);
+      }
+    }
+
+    function refreshSongPreview(resetView = false) {
+      if (!songData) return;
+
+      const activeData = rebuildActiveSongData();
+      if (!activeData) return;
+
+      const s = activeData.summary;
+      summaryGrid.innerHTML = `
+        <div class="summary-stat"><span class="stat-value">${s.groups}</span><span class="stat-label">Groups</span></div>
+        <div class="summary-stat"><span class="stat-value">${s.notes}</span><span class="stat-label">Notes</span></div>
+        <div class="summary-stat"><span class="stat-value">${s.tracks}</span><span class="stat-label">Tracks</span></div>
+        <div class="summary-stat"><span class="stat-value">${s.length_seconds}s</span><span class="stat-label">Duration</span></div>
+        <div class="summary-stat"><span class="stat-value">${s.instruments_used.length}</span><span class="stat-label">Instruments</span></div>
+        ${s.out_of_range > 0 ? `<div class="summary-stat"><span class="stat-value" style="color:var(--accent-gold)">${s.out_of_range}</span><span class="stat-label">Out of Range</span></div>` : ''}
+      `;
+
+      renderInstrumentRemapControls();
+
+      const legendGrid = $('legendGrid');
+      legendGrid.innerHTML = '';
+      for (const inst of s.instruments_used) {
+        const ic = instrumentMeta(inst);
+        const iconUrl = instrumentIconUrl(ic);
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        item.innerHTML = `<span class="legend-swatch" style="background:${ic.bg}"></span><img class="pixelated" src="${iconUrl}" style="width:15px; height:15px; vertical-align:middle; margin-right:5px;"><span>${ic.label}</span>`;
+        legendGrid.appendChild(item);
+      }
+
+      layoutData = computeLayout(activeData.groups);
+
+      previewSection.classList.add('visible');
+      previewSection.classList.add('animate-in');
+
+      if (resetView) {
+        setTimeout(() => {
+          viewOffset = 0;
+          viewOffsetY = 0;
+          playheadZ = -1;
+          drawViewer();
+          centerVertically();
+        }, 50);
+      } else {
+        drawViewer();
+      }
+    }
+
+    /* ==========================================================
+       FILE UPLOAD
+       ========================================================== */
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / 1048576).toFixed(1) + ' MB';
+    }
+
+    function setStatus(message, type = '') {
+      status.className = `status-bar ${type}`.trim();
+      status.innerHTML = message;
+    }
+
+    function selectFile(file) {
+      if (!file) return;
+      const ext = file.name.toLowerCase();
+      if (!ext.endsWith('.mid') && !ext.endsWith('.midi')) {
+        setStatus('Please upload a .mid or .midi file.', 'error');
+        return;
+      }
+      currentFile = file;
+      fileName.textContent = file.name;
+      fileSize.textContent = formatBytes(file.size);
+      fileInfo.classList.add('visible');
+      convertBtn.classList.add('visible');
+      setStatus('');
+    }
+
+    dropzone.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', (e) => {
+      selectFile(e.target.files[0]);
+      fileInput.value = '';
+    });
+
+    ['dragenter', 'dragover'].forEach(ev =>
+      dropzone.addEventListener(ev, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); })
+    );
+    ['dragleave', 'drop'].forEach(ev =>
+      dropzone.addEventListener(ev, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); })
+    );
+    dropzone.addEventListener('drop', (e) => selectFile(e.dataTransfer.files[0]));
+
+    /* Tie-rounding toggle (default: round up, matches the CLI default) */
+    let roundHalfUp = true;
+    $('roundUpBtn').addEventListener('click', () => {
+      roundHalfUp = true;
+      $('roundUpBtn').classList.add('active');
+      $('roundDownBtn').classList.remove('active');
+    });
+    $('roundDownBtn').addEventListener('click', () => {
+      roundHalfUp = false;
+      $('roundDownBtn').classList.add('active');
+      $('roundUpBtn').classList.remove('active');
+    });
+
+    function updateLitematicaWarning() {
+      const warningEl = $('litematicaWarning');
+      if (warningEl) {
+        const show = $('disableTickingLimit').checked || $('disableOctaveLimit').checked;
+        warningEl.style.display = show ? 'block' : 'none';
+      }
+    }
+    $('disableTickingLimit').addEventListener('change', updateLitematicaWarning);
+    $('disableOctaveLimit').addEventListener('change', updateLitematicaWarning);
+
+    /* ==========================================================
+       CONVERSION
+       ========================================================== */
+    async function runConversion() {
+      if (!currentFile) return;
+      convertBtn.disabled = true;
+      setStatus('<span class="loader"></span> Converting MIDI to noteblocks...', 'loading');
+
+      const formData = new FormData();
+      formData.append('file', currentFile);
+      formData.append('round_half_up', roundHalfUp ? 'true' : 'false');
+      formData.append('disable_octave_limit', $('disableOctaveLimit').checked ? 'true' : 'false');
+      formData.append('disable_ticking_limit', $('disableTickingLimit').checked ? 'true' : 'false');
+
+      try {
+        const resp = await fetch('/convert-json', { method: 'POST', body: formData });
+        if (!resp.ok) {
+          let msg = 'Conversion failed.';
+          try { const j = await resp.json(); if (j.error) msg = j.error; } catch { }
+          throw new Error(msg);
+        }
+        // New data invalidates any in-progress playback of the old song
+        stopPlayback();
+        songData = await resp.json();
+        instrumentRemap = {};
+        activeSongData = null;
+        setStatus('✔ Conversion complete! Preview your noteblock pattern below.', 'success');
+
+        await preloadTextures();
+        refreshSongPreview(true);   // recomputes layout + redraws preview for the new file
+        showDownloadSection();
+      } catch (err) {
+        setStatus(err.message || 'Conversion failed.', 'error');
+      } finally {
+        convertBtn.disabled = false;
+      }
+    }
+
+    convertBtn.addEventListener('click', runConversion);
+
+    /* ==========================================================
+       LAYOUT COMPUTATION
+       Mirrors generate_litematic.py logic to build a 2D grid
+       ========================================================== */
+    function splitDelay(delay) {
+      const parts = [];
+      let rem = delay;
+      while (rem > 0) { const p = Math.min(4, rem); parts.push(p); rem -= p; }
+      return parts;
+    }
+
+    function computeLayout(groups) {
+      if (!groups || groups.length === 0) return null;
+
+      /* Mirror the litematic layout logic */
+      const maxChord = Math.max(1, ...groups.map(g => (g.chords || []).length));
+      const centerX = maxChord + 1;
+
+      /* Compute chain ends and delay positions */
+      const layout = {
+        cells: [],     // { x, z, type, data }
+        maxX: 0,
+        maxZ: 0,
+        centerX: centerX,
+        groupMarkers: [],  // { z, groupIndex }
+      };
+
+      function addCell(x, z, type, data) {
+        layout.cells.push({ x, z, type, data });
+        if (x > layout.maxX) layout.maxX = x;
+        if (z > layout.maxZ) layout.maxZ = z;
+      }
+
+      // Pattern depth
+      function patternDepth(g) { return (g.chords || []).length >= 4 ? 3 : 1; }
+
+      // Delay chain for a group
+      function delayChain(g) {
+        let delay = parseInt(g.redstoneTickDelay) || 0;
+        if ((g.chords || []).length >= 4) delay = Math.max(0, delay - 1);
+        return splitDelay(delay);
+      }
+
+      // Chain end positions
+      const chainEnds = [];
+      let currentEndZ = 2;
+      chainEnds.push(currentEndZ);
+
+      for (let i = 1; i < groups.length; i++) {
+        currentEndZ += patternDepth(groups[i - 1]);
+        currentEndZ += delayChain(groups[i]).length;
+        chainEnds.push(currentEndZ);
+      }
+
+      // Starter blocks
+      addCell(centerX, 0, 'noteblock', { instrument: 'harp', note: 0, pitch: 'F#', block: 'minecraft:dirt', label: 'Starter' });
+      addCell(centerX, 1, 'observer', {});
+      addCell(centerX, 2, 'repeater', { delay: 1 });
+
+      // Delay chains between groups
+      let prevEndZ = 2;
+      for (let i = 1; i < groups.length; i++) {
+        const chainStartZ = prevEndZ + patternDepth(groups[i - 1]) + 1;
+        const delays = delayChain(groups[i]);
+        for (let off = 0; off < delays.length; off++) {
+          const z = chainStartZ + off;
+          addCell(centerX, z, 'repeater', { delay: delays[off], groupTransition: true });
+        }
+        prevEndZ = chainEnds[i];
+      }
+
+      // Note groups
+      function centeredXPositions(count) {
+        const start = centerX - Math.floor((count - 1) / 2);
+        return Array.from({ length: count }, (_, i) => start + i);
+      }
+
+      for (let gi = 0; gi < groups.length; gi++) {
+        const g = groups[gi];
+        const chainEndZ = chainEnds[gi];
+        const chords = g.chords || [];
+        if (chords.length === 0) continue;
+
+        layout.groupMarkers.push({ z: chainEndZ, groupIndex: gi, delay: g.redstoneTickDelay });
+
+        if (chords.length < 4) {
+          // Small group: notes at chainEndZ + 1
+          const noteZ = chainEndZ + 1;
+          const xPositions = centeredXPositions(chords.length);
+          for (let ci = 0; ci < chords.length; ci++) {
+            addCell(xPositions[ci], noteZ, 'noteblock', {
+              instrument: chords[ci].instrument,
+              note: chords[ci].note,
+              pitch: chords[ci].pitch || PITCH_NAMES[(((chords[ci].note || 0) % 12) + 12) % 12],
+              block: chords[ci].block,
+              trackName: chords[ci].trackName,
+              groupIndex: gi,
+            });
+          }
+        } else {
+          // Large group: dust -> repeater row -> notes
+          const dustZ = chainEndZ + 1;
+          const repZ = chainEndZ + 2;
+          const noteZ = chainEndZ + 3;
+          const delay = parseInt(g.redstoneTickDelay, 10) || 0;
+          const forceCrossMiddle = delay > 1;
+          const xPositions = centeredXPositions(chords.length);
+          for (let ci = 0; ci < chords.length; ci++) {
+            addCell(xPositions[ci], dustZ, 'dust', { shape: dustShapeForIndex(ci, chords.length, forceCrossMiddle) });
+            addCell(xPositions[ci], repZ, 'repeater', { delay: 1, chordRepeater: true });
+            addCell(xPositions[ci], noteZ, 'noteblock', {
+              instrument: chords[ci].instrument,
+              note: chords[ci].note,
+              pitch: chords[ci].pitch || PITCH_NAMES[(((chords[ci].note || 0) % 12) + 12) % 12],
+              block: chords[ci].block,
+              trackName: chords[ci].trackName,
+              groupIndex: gi,
+            });
+          }
+        }
+      }
+
+      // Build a z->time map for smooth column-by-column playhead ticking
+      const zTimes = new Map(); // z -> absolute song time in seconds
+      let colTime = 0;
+
+      // Each cell in the chain contributes time based on its type
+      // We walk z=0 upward, computing when signal reaches each column
+      // Repeaters add their delay (in redstone ticks = 0.1s each)
+      // Noteblock columns fire when signal arrives
+
+      const allZ = [...new Set(layout.cells.map(c => c.z))].sort((a, b) => a - b);
+      for (const z of allZ) {
+        zTimes.set(z, colTime);
+        // Find repeaters at this z to determine delay to next column
+        const repeatersAtZ = layout.cells.filter(c => c.z === z && c.type === 'repeater');
+        if (repeatersAtZ.length > 0) {
+          const delay = repeatersAtZ[0].data.delay || 1;
+          colTime += delay * 0.1;
+        } else {
+          // dust, observer, noteblock — signal passes through in the same tick
+          colTime += 0;
+        }
+      }
+
+      layout.zTimes = zTimes;
+
+      return layout;
+    }
+
+    /* ==========================================================
+       CANVAS RENDERER
+       ========================================================== */
+    const CELL_SIZE_BASE = 16; // base pixel size of one block (texture is 16px)
+    const VIEWER_HEIGHT = 420; // fixed height of the scrollable viewer region
+    const Y_TOP_PAD = 20;      // top padding inside canvas for group labels
+    let zoomLevel = 2;         // multiplier
+    let viewOffset = 0;        // horizontal scroll offset in pixels
+    let viewOffsetY = 0;       // vertical scroll offset in pixels
+    let currentLayer = 'blocks'; // 'blocks' or 'support'
+    let playheadZ = -1;        // current playhead Z position (-1 = hidden)
+
+    function cellSize() { return CELL_SIZE_BASE * zoomLevel; }
+
+    function resizeCanvas() {
+      const container = canvas.parentElement;
+      const dpr = window.devicePixelRatio || 1;
+      const w = container.clientWidth;
+      let h;
+      if (document.fullscreenElement) {
+        const toolbar = container.querySelector('.viewer-toolbar');
+        const scrollbar = container.querySelector('.viewer-scrollbar');
+        const toolbarH = toolbar ? toolbar.offsetHeight : 0;
+        const scrollbarH = scrollbar ? scrollbar.offsetHeight : 0;
+        h = container.clientHeight - toolbarH - scrollbarH;
+      } else {
+        h = VIEWER_HEIGHT;
+      }
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = false;
+    }
+
+    function drawViewer() {
+      if (!layoutData) return;
+      resizeCanvas();
+
+      ctx.imageSmoothingEnabled = false;
+
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      const cs = cellSize();
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Background grid
+      ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+      ctx.lineWidth = 0.5;
+      for (let gx = -viewOffset % cs; gx < w; gx += cs) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke();
+      }
+      for (let gy = (Y_TOP_PAD - viewOffsetY) % cs; gy < h; gy += cs) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(w, gy); ctx.stroke();
+      }
+
+      // Group markers (vertical highlight bands)
+      const bandedZ = new Set();
+      ctx.fillStyle = 'rgba(46, 204, 113, 0.04)';
+      for (const cell of layoutData.cells) {
+        if (cell.type !== 'noteblock' || cell.data.groupIndex === undefined) continue;
+        if (bandedZ.has(cell.z)) continue;
+        bandedZ.add(cell.z);
+        const screenX = cell.z * cs - viewOffset;
+        if (screenX + cs > 0 && screenX < w) {
+          ctx.fillRect(screenX, 0, cs, h);
+        }
+      }
+
+      // Draw cells
+      const yOffset = Y_TOP_PAD - viewOffsetY; // top padding minus vertical scroll
+      ctx.imageSmoothingEnabled = false;
+
+      for (const cell of layoutData.cells) {
+        const screenX = cell.z * cs - viewOffset;
+        const screenY = cell.x * cs + yOffset;
+
+        // Frustum culling
+        if (screenX + cs < 0 || screenX > w) continue;
+        if (screenY + cs < 0 || screenY > h) continue;
+
+        if (currentLayer === 'blocks') {
+          drawBlockCell(cell, screenX, screenY, cs);
+        } else {
+          drawSupportCell(cell, screenX, screenY, cs);
+        }
+      }
+
+      // Group index labels
+      const labeledKeys = new Set();
+      ctx.font = `${Math.max(8, cs * 0.35)}px ${getComputedStyle(document.body).getPropertyValue('--font-pixel')}`;
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(46, 204, 113, 0.6)';
+      for (const cell of layoutData.cells) {
+        if (cell.type !== 'noteblock' || cell.data.groupIndex === undefined) continue;
+        const key = `${cell.data.groupIndex}:${cell.z}`;
+        if (labeledKeys.has(key)) continue;
+        labeledKeys.add(key);
+        const screenX = cell.z * cs - viewOffset + cs / 2;
+        if (screenX > -cs && screenX < w + cs) {
+          ctx.fillText(`G${cell.data.groupIndex}`, screenX, 14);
+        }
+      }
+
+      // Playhead
+      if (playheadZ >= 0) {
+        const phX = playheadZ * cs - viewOffset;
+        ctx.strokeStyle = 'rgba(231, 76, 60, 0.8)';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(phX, 0);
+        ctx.lineTo(phX, h);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Playhead triangle
+        ctx.fillStyle = 'rgba(231, 76, 60, 0.9)';
+        ctx.beginPath();
+        ctx.moveTo(phX - 6, 0);
+        ctx.lineTo(phX + 6, 0);
+        ctx.lineTo(phX, 10);
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      updateScrollbar();
+    }
+
+    function drawBlockCell(cell, x, y, size) {
+      const padding = Math.max(1, size * 0.06);
+      const inner = size - padding * 2;
+
+      switch (cell.type) {
+        case 'noteblock': {
+          const tex = textureCache['note_block'];
+          if (tex) {
+            ctx.drawImage(tex, x + padding, y + padding, inner, inner);
+          } else {
+            ctx.fillStyle = '#654321';
+            ctx.fillRect(x + padding, y + padding, inner, inner);
+          }
+          // Instrument color overlay
+          const color = INSTRUMENT_COLORS[cell.data.instrument];
+          if (color) {
+            ctx.fillStyle = color.bg + '88';
+            ctx.fillRect(x + padding, y + padding, inner, inner);
+          }
+          // Note value label: show numeric note above, pitch below when space allows
+          if (size >= 24) {
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#fff';
+            ctx.strokeStyle = 'rgba(0,0,0,0.7)';
+            ctx.lineWidth = 2;
+
+            const pitchLabel = cell.data.pitch || null;
+            const noteNumber = (typeof cell.data.note !== 'undefined' && cell.data.note !== null) ? String(cell.data.note) : null;
+
+            if (noteNumber && pitchLabel) {
+              // Draw number above and pitch below
+              const numFont = `bold ${Math.max(6, inner * 0.28)}px ${getComputedStyle(document.body).getPropertyValue('--font-body')}`;
+              const pitchFont = `bold ${Math.max(7, inner * 0.30)}px ${getComputedStyle(document.body).getPropertyValue('--font-body')}`;
+
+              ctx.font = numFont;
+              ctx.strokeText(noteNumber, x + size / 2, y + size / 2 - inner * 0.22);
+              ctx.fillText(noteNumber, x + size / 2, y + size / 2 - inner * 0.22);
+
+              ctx.font = pitchFont;
+              ctx.strokeText(pitchLabel, x + size / 2, y + size / 2 + inner * 0.18);
+              ctx.fillText(pitchLabel, x + size / 2, y + size / 2 + inner * 0.18);
+            } else {
+              const singleFont = `bold ${Math.max(7, inner * 0.35)}px ${getComputedStyle(document.body).getPropertyValue('--font-body')}`;
+              const label = pitchLabel || noteNumber || '';
+              ctx.font = singleFont;
+              ctx.strokeText(label, x + size / 2, y + size / 2);
+              ctx.fillText(label, x + size / 2, y + size / 2);
+            }
+          }
+          // Border
+          ctx.strokeStyle = (color ? color.bg : '#888') + 'aa';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x + padding, y + padding, inner, inner);
+          break;
+        }
+
+        case 'repeater': {
+          const powered = playheadZ >= 0 && cell.z <= playheadZ;
+          const texName = repeaterTextureName(cell.data.delay, powered);
+          const tex = textureCache[texName];
+          if (tex) {
+            ctx.drawImage(tex, x + padding, y + padding, inner, inner);
+          } else {
+            ctx.fillStyle = '#888';
+            ctx.fillRect(x + padding, y + padding, inner, inner);
+            // Draw repeater cross pattern
+            ctx.fillStyle = '#c44';
+            const tw = inner * 0.15;
+            ctx.fillRect(x + size / 2 - tw / 2, y + padding + inner * 0.2, tw, inner * 0.15);
+            // Rear torch position based on delay
+            const delayFrac = (cell.data.delay - 1) / 3;
+            const torchY = y + padding + inner * (0.5 + delayFrac * 0.35);
+            ctx.fillRect(x + size / 2 - tw / 2, torchY, tw, inner * 0.15);
+          }
+          // Delay label
+          if (size >= 20) {
+            ctx.font = `bold ${Math.max(7, inner * 0.4)}px ${getComputedStyle(document.body).getPropertyValue('--font-pixel')}`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#ff6b6b';
+            ctx.strokeStyle = 'rgba(0,0,0,0.8)';
+            ctx.lineWidth = 2;
+            ctx.strokeText(cell.data.delay + 't', x + size / 2, y + size / 2);
+            ctx.fillText(cell.data.delay + 't', x + size / 2, y + size / 2);
+          }
+          ctx.strokeStyle = '#c4444488';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x + padding, y + padding, inner, inner);
+          break;
+        }
+
+        case 'dust': {
+          const powered = playheadZ >= 0 && cell.z <= playheadZ;
+          const shape = cell.data.shape || 'cross';
+          const tex = textureCache[dustTextureName(shape, powered)];
+          if (tex) {
+            ctx.globalAlpha = 0.7;
+            ctx.drawImage(tex, x + padding, y + padding, inner, inner);
+            ctx.globalAlpha = 1;
+          } else {
+            ctx.fillStyle = powered ? '#f55' : '#c44';
+            const dotR = inner * 0.2;
+            ctx.beginPath();
+            ctx.arc(x + size / 2, y + size / 2, dotR, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          break;
+        }
+
+        case 'observer': {
+          ctx.fillStyle = '#555';
+          ctx.fillRect(x + padding, y + padding, inner, inner);
+          ctx.fillStyle = '#c44';
+          ctx.fillRect(x + size / 2 - inner * 0.15, y + size / 2 - inner * 0.15, inner * 0.3, inner * 0.3);
+          ctx.strokeStyle = '#77777788';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x + padding, y + padding, inner, inner);
+          break;
+        }
+      }
+    }
+
+    function drawSupportCell(cell, x, y, size) {
+      const padding = Math.max(1, size * 0.06);
+      const inner = size - padding * 2;
+
+      if (cell.type === 'noteblock') {
+        // Show support block underneath
+        const texName = BLOCK_TEXTURES[cell.data.block];
+        const tex = texName ? textureCache[texName] : null;
+        if (tex) {
+          ctx.drawImage(tex, x + padding, y + padding, inner, inner);
+        } else {
+          ctx.fillStyle = '#654321';
+          ctx.fillRect(x + padding, y + padding, inner, inner);
+        }
+        // Label
+        if (size >= 24) {
+          const label = BLOCK_LABELS[cell.data.block] || cell.data.block;
+          ctx.font = `${Math.max(6, inner * 0.22)}px ${getComputedStyle(document.body).getPropertyValue('--font-body')}`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillStyle = '#fff';
+          ctx.strokeStyle = 'rgba(0,0,0,0.8)';
+          ctx.lineWidth = 2;
+          ctx.strokeText(label, x + size / 2, y + size / 2);
+          ctx.fillText(label, x + size / 2, y + size / 2);
+        }
+        ctx.strokeStyle = '#88888844';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x + padding, y + padding, inner, inner);
+      } else if (cell.type === 'repeater' || cell.type === 'dust') {
+        // Show stone underneath
+        const tex = textureCache['stone'];
+        if (tex) {
+          ctx.globalAlpha = 0.5;
+          ctx.drawImage(tex, x + padding, y + padding, inner, inner);
+          ctx.globalAlpha = 1;
+        } else {
+          ctx.fillStyle = 'rgba(128, 128, 128, 0.3)';
+          ctx.fillRect(x + padding, y + padding, inner, inner);
+        }
+      }
+    }
+
+    /* ==========================================================
+       SCROLL & ZOOM
+       ========================================================== */
+    function maxScroll() {
+      if (!layoutData) return 0;
+      return Math.max(0, (layoutData.maxZ + 3) * cellSize() - canvas.clientWidth);
+    }
+
+    function contentHeight() {
+      if (!layoutData) return 0;
+      return (layoutData.maxX + 1) * cellSize();
+    }
+
+    function maxScrollY() {
+      if (!layoutData) return 0;
+      const visible = canvas.clientHeight - Y_TOP_PAD;
+      return Math.max(0, contentHeight() - visible);
+    }
+
+    function clampOffset() {
+      viewOffset = Math.max(0, Math.min(maxScroll(), viewOffset));
+
+      const visible = canvas.clientHeight - Y_TOP_PAD;
+      if (layoutData) {
+        if (contentHeight() < visible) {
+          const cs = cellSize();
+          viewOffsetY = layoutData.centerX * cs + cs / 2 + Y_TOP_PAD - canvas.clientHeight / 2;
+        } else {
+          viewOffsetY = Math.max(0, Math.min(maxScrollY(), viewOffsetY));
+        }
+      } else {
+        viewOffsetY = 0;
+      }
+    }
+
+    function centerVertically() {
+      if (!layoutData) return;
+      const cs = cellSize();
+      const visible = canvas.clientHeight;
+      viewOffsetY = layoutData.centerX * cs + cs / 2 + Y_TOP_PAD - visible / 2;
+      clampOffset();
+      drawViewer();
+    }
+
+    function updateScrollbar() {
+      const total = (layoutData ? layoutData.maxZ + 3 : 1) * cellSize();
+      const visible = canvas.clientWidth;
+      const ratio = Math.min(1, visible / total);
+      const thumb = $('scrollThumb');
+      const bar = $('viewerScrollbar');
+      thumb.style.width = (ratio * bar.clientWidth) + 'px';
+      thumb.style.left = (total > visible ? (viewOffset / total) * bar.clientWidth : 0) + 'px';
+    }
+
+    // Mouse drag scroll (both axes)
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragStartOffset = 0;
+    let dragStartOffsetY = 0;
+
+    canvas.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
+      dragStartOffset = viewOffset;
+      dragStartOffsetY = viewOffsetY;
+      canvas.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      viewOffset = dragStartOffset - (e.clientX - dragStartX);
+      viewOffsetY = dragStartOffsetY - (e.clientY - dragStartY);
+      clampOffset();
+      drawViewer();
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      canvas.style.cursor = 'grab';
+    });
+
+    // Wheel scroll: vertical by default, horizontal with Shift, zoom with Ctrl
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.ctrlKey) {
+        // Zoom
+        const delta = e.deltaY > 0 ? -0.5 : 0.5;
+        const oldZoom = zoomLevel;
+        zoomLevel = Math.max(1, Math.min(6, zoomLevel + delta));
+        // Keep position centered
+        const mouseX = e.offsetX;
+        const worldX = (viewOffset + mouseX) / (CELL_SIZE_BASE * oldZoom);
+        viewOffset = worldX * cellSize() - mouseX;
+        clampOffset();
+        $('zoomDisplay').textContent = zoomLevel + 'x';
+      } else if (e.shiftKey) {
+        viewOffset += e.deltaY * 2;
+        clampOffset();
+      } else {
+        viewOffsetY += e.deltaY;
+        viewOffset += e.deltaX * 2;
+        clampOffset();
+      }
+      drawViewer();
+    }, { passive: false });
+
+    // Scrollbar drag
+    let isScrollbarDragging = false;
+    $('scrollThumb').addEventListener('mousedown', (e) => {
+      isScrollbarDragging = true;
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isScrollbarDragging) return;
+      const bar = $('viewerScrollbar');
+      const rect = bar.getBoundingClientRect();
+      const frac = (e.clientX - rect.left) / rect.width;
+      const total = (layoutData ? layoutData.maxZ + 3 : 1) * cellSize();
+      viewOffset = frac * total - canvas.clientWidth / 2;
+      clampOffset();
+      drawViewer();
+    });
+    window.addEventListener('mouseup', () => { isScrollbarDragging = false; });
+
+    // Zoom buttons
+    $('zoomIn').addEventListener('click', () => {
+      zoomLevel = Math.min(6, zoomLevel + 0.5);
+      $('zoomDisplay').textContent = zoomLevel + 'x';
+      clampOffset();
+      drawViewer();
+    });
+
+    $('zoomOut').addEventListener('click', () => {
+      zoomLevel = Math.max(1, zoomLevel - 0.5);
+      $('zoomDisplay').textContent = zoomLevel + 'x';
+      clampOffset();
+      drawViewer();
+    });
+
+    $('fitBtn').addEventListener('click', () => {
+      if (!layoutData) return;
+      const totalW = (layoutData.maxZ + 3) * CELL_SIZE_BASE;
+      zoomLevel = Math.max(1, Math.min(6, canvas.clientWidth / totalW));
+      zoomLevel = Math.round(zoomLevel * 2) / 2;
+      $('zoomDisplay').textContent = zoomLevel + 'x';
+      viewOffset = 0;
+      centerVertically();
+    });
+
+    $('centerYBtn').addEventListener('click', centerVertically);
+
+    $('resetViewBtn').addEventListener('click', () => {
+      zoomLevel = 2;
+      viewOffset = 0;
+      $('zoomDisplay').textContent = '2x';
+      centerVertically();
+    });
+
+    if (instrumentRemapGrid) {
+      instrumentRemapGrid.addEventListener('change', (e) => {
+        const select = e.target.closest('select[data-source]');
+        if (!select || !songData) return;
+        instrumentRemap[select.dataset.source] = select.value;
+        const wasPlaying = isPlaying && !isPaused;
+        const resumeOffset = wasPlaying && audioCtx ? (audioCtx.currentTime - playStartTime) * playbackSpeed : 0;
+        const syncToken = ++remapPlaybackSyncToken;
+
+        refreshSongPreview(false);
+
+        if (!wasPlaying) return;
+
+        const playbackData = getActiveSongData();
+        if (!playbackData) return;
+
+        loadAllSounds(playbackData.groups).then(() => {
+          if (syncToken !== remapPlaybackSyncToken) return;
+          stopAllSources();
+          schedulePlayback(resumeOffset);
+        });
+      });
+    }
+
+    if (resetInstrumentMapBtn) {
+      resetInstrumentMapBtn.addEventListener('click', () => {
+        if (!songData) return;
+        instrumentRemap = {};
+        const wasPlaying = isPlaying && !isPaused;
+        const resumeOffset = wasPlaying && audioCtx ? (audioCtx.currentTime - playStartTime) * playbackSpeed : 0;
+        const syncToken = ++remapPlaybackSyncToken;
+
+        refreshSongPreview(false);
+
+        if (!wasPlaying) return;
+
+        const playbackData = getActiveSongData();
+        if (!playbackData) return;
+
+        loadAllSounds(playbackData.groups).then(() => {
+          if (syncToken !== remapPlaybackSyncToken) return;
+          stopAllSources();
+          schedulePlayback(resumeOffset);
+        });
+      });
+    }
+
+    // Layer toggle
+    $('layerBlocks').addEventListener('click', () => {
+      currentLayer = 'blocks';
+      $('layerBlocks').classList.add('active');
+      $('layerSupport').classList.remove('active');
+      drawViewer();
+    });
+
+    $('layerSupport').addEventListener('click', () => {
+      currentLayer = 'support';
+      $('layerSupport').classList.add('active');
+      $('layerBlocks').classList.remove('active');
+      drawViewer();
+    });
+
+    /* ==========================================================
+       TOOLTIP
+       ========================================================== */
+    const tooltip = $('block-tooltip');
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDragging || !layoutData) return;
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const cs = cellSize();
+      const worldZ = Math.floor((mx + viewOffset) / cs);
+      const worldX = Math.floor((my - Y_TOP_PAD + viewOffsetY) / cs);
+
+      // Find matching cell
+      const cell = layoutData.cells.find(c => c.z === worldZ && c.x === worldX);
+      if (cell) {
+        showTooltip(e.clientX, e.clientY, cell);
+      } else {
+        tooltip.classList.remove('visible');
+      }
+    });
+
+    canvas.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+
+    function showTooltip(mouseX, mouseY, cell) {
+      const title = $('tooltipTitle');
+      const content = $('tooltipContent');
+
+      let titleHTML = '';
+      let rows = '';
+
+      switch (cell.type) {
+        case 'noteblock': {
+          const ic = instrumentMeta(cell.data.instrument);
+          const iconUrl = instrumentIconUrl(ic);
+          titleHTML = `<img class="pixelated" src="${iconUrl}" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;"> Note Block`;
+          rows = `
+            <div class="tooltip-row"><span class="label">Instrument</span><span class="value">${ic.label}</span></div>
+            <div class="tooltip-row"><span class="label">Pitch</span><span class="value">${cell.data.pitch || 'N/A'}</span></div>
+            <div class="tooltip-row"><span class="label">Note Value</span><span class="value">${cell.data.note}</span></div>
+            <div class="tooltip-row"><span class="label">Support Block</span><span class="value">${BLOCK_LABELS[cell.data.block] || cell.data.block}</span></div>
+            ${cell.data.trackName ? `<div class="tooltip-row"><span class="label">Track</span><span class="value">${cell.data.trackName}</span></div>` : ''}
+            ${cell.data.groupIndex !== undefined ? `<div class="tooltip-row"><span class="label">Group</span><span class="value">#${cell.data.groupIndex}</span></div>` : ''}
+          `;
+          break;
+        }
+        case 'repeater': {
+          titleHTML = '⏱ Repeater';
+          rows = `
+            <div class="tooltip-row"><span class="label">Delay</span><span class="value">${cell.data.delay} tick${cell.data.delay > 1 ? 's' : ''}</span></div>
+            <div class="tooltip-row"><span class="label">Powered</span><span class="value">${cell.data.powered ? 'Yes' : 'No'}</span></div>
+            <div class="tooltip-row"><span class="label">Facing</span><span class="value">North (+Z)</span></div>
+            <div class="tooltip-row"><span class="label">Locked</span><span class="value">No</span></div>
+          `;
+          break;
+        }
+        case 'dust':
+          titleHTML = '🔴 Redstone Dust';
+          rows = `<div class="tooltip-row"><span class="label">Type</span><span class="value">Signal Wire</span></div>`;
+          break;
+        case 'observer':
+          titleHTML = '👁 Observer';
+          rows = `<div class="tooltip-row"><span class="label">Facing</span><span class="value">North</span></div>
+                   <div class="tooltip-row"><span class="label">Role</span><span class="value">Starter trigger</span></div>`;
+          break;
+      }
+
+      title.innerHTML = titleHTML;
+      content.innerHTML = rows;
+      tooltip.classList.add('visible');
+
+      // Position
+      const pad = 12;
+      let tx = mouseX + pad;
+      let ty = mouseY + pad;
+      if (tx + 280 > window.innerWidth) tx = mouseX - 280 - pad;
+      if (ty + 200 > window.innerHeight) ty = mouseY - 200 - pad;
+      tooltip.style.left = tx + 'px';
+      tooltip.style.top = ty + 'px';
+    }
+
+    /* ==========================================================
+       AUDIO ENGINE (Web Audio API)
+       ========================================================== */
+    let audioCtx = null;
+    let gainNode = null;
+    const soundBuffers = {};  // { instrument: AudioBuffer }
+    let isPlaying = false;
+    let isPaused = false;
+    let scheduledSources = [];
+    let playStartTime = 0;
+    let pauseElapsed = 0;
+    let totalDuration = 0;
+    let playbackSpeed = 1;
+    let animFrameId = null;
+
+    async function loadSound(instrument) {
+      if (soundBuffers[instrument]) return;
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const fileName = SOUND_FILE_ALIASES[instrument] || instrument;
+
+      try {
+        const resp = await fetch(`/static/sounds/${fileName}.ogg`);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const arrayBuf = await resp.arrayBuffer();
+        soundBuffers[instrument] = await audioCtx.decodeAudioData(arrayBuf);
+      } catch (err) {
+        console.warn(`Failed to load sound for ${instrument}:`, err);
+      }
+    }
+
+    async function loadAllSounds(groups) {
+      const instruments = new Set();
+      for (const g of groups) {
+        for (const c of (g.chords || [])) {
+          instruments.add(c.instrument);
+        }
+      }
+      await Promise.all([...instruments].map(loadSound));
+    }
+
+    function noteToPlaybackRate(noteValue) {
+      // Minecraft formula: 2^((note - 12) / 12)
+      return Math.pow(2, (noteValue - 12) / 12);
+    }
+
+    /* Build the absolute play time (seconds) of each group's onset, with the
+       song's leading offset removed so the first note fires at t=0. Returns
+       { times: number[], duration: number } where duration extends past the
+       last onset by a tail so the final note can ring out. */
+    const NOTE_TAIL_SECONDS = 1.2; // let the last note(s) sustain before stopping
+    function buildTimeline(groups) {
+      const times = [];
+      let t = 0;
+      for (let i = 0; i < groups.length; i++) {
+        // redstoneTickDelay is the gap BEFORE this group. Group 0's delay is
+        // the song's leading offset — skip it so playback starts immediately.
+        if (i > 0) t += (groups[i].redstoneTickDelay || 0) * 0.1;
+        times.push(t);
+      }
+      const lastOnset = times.length ? times[times.length - 1] : 0;
+      return { times, duration: lastOnset + NOTE_TAIL_SECONDS };
+    }
+
+    function computeTotalDuration(groups) {
+      return buildTimeline(groups).duration;
+    }
+
+    function schedulePlayback(startOffset = 0) {
+      const playbackData = getActiveSongData();
+      if (!audioCtx || !playbackData) return;
+
+      if (!gainNode) {
+        gainNode = audioCtx.createGain();
+        gainNode.connect(audioCtx.destination);
+      }
+      gainNode.gain.value = parseFloat($('volumeSlider').value);
+
+      const speed = playbackSpeed;
+      const currentTime = audioCtx.currentTime;
+      const { times } = buildTimeline(playbackData.groups);
+      playStartTime = currentTime - startOffset / speed;
+
+      for (let gi = 0; gi < playbackData.groups.length; gi++) {
+        const songTime = times[gi];
+        if (songTime < startOffset) continue;
+
+        const schedTime = currentTime + (songTime - startOffset) / speed;
+
+        for (const chord of (playbackData.groups[gi].chords || [])) {
+          const buffer = soundBuffers[chord.instrument];
+          if (!buffer) continue;
+
+          const source = audioCtx.createBufferSource();
+          source.buffer = buffer;
+          source.playbackRate.value = noteToPlaybackRate(chord.note || 0);
+          source.connect(gainNode);
+          source.start(schedTime);
+          scheduledSources.push(source);
+        }
+      }
+    }
+
+    function startPlayback() {
+      const playbackData = getActiveSongData();
+      if (!playbackData) return;
+      if (isPlaying && !isPaused) return;
+
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+
+      loadAllSounds(playbackData.groups).then(() => {
+        totalDuration = computeTotalDuration(playbackData.groups);
+        stopAllSources();
+
+        const offset = isPaused ? pauseElapsed : 0;
+        isPaused = false;
+        isPlaying = true;
+        playbackSpeed = parseFloat($('speedSelect').value);
+
+        schedulePlayback(offset);
+        startPlayheadAnimation();
+
+        setPlayPauseButtonState('playing');
+      });
+    }
+
+    function pausePlayback() {
+      if (!isPlaying || isPaused) return;
+      isPaused = true;
+      pauseElapsed = (audioCtx.currentTime - playStartTime) * playbackSpeed;
+      stopAllSources();
+      cancelAnimationFrame(animFrameId);
+
+      setPlayPauseButtonState('paused');
+    }
+
+    function stopPlayback() {
+      isPlaying = false;
+      isPaused = false;
+      pauseElapsed = 0;
+      stopAllSources();
+      cancelAnimationFrame(animFrameId);
+      playheadZ = -1;
+      updateProgressUI(0);
+      drawViewer();
+
+      setPlayPauseButtonState('paused');
+    }
+
+    function stopAllSources() {
+      for (const s of scheduledSources) {
+        try { s.stop(); } catch { }
+      }
+      scheduledSources = [];
+    }
+
+    function setPlayPauseButtonState(state) {
+      const button = $('playPauseBtn');
+      const icon = $('playPauseIcon');
+      if (!button || !icon) return;
+
+      if (state === 'playing') {
+        button.title = 'Pause';
+        icon.src = '/static/icons/pause.png';
+        icon.alt = 'Pause';
+      } else {
+        button.title = 'Play';
+        icon.src = '/static/icons/play.png';
+        icon.alt = 'Play';
+      }
+    }
+
+    /* ==========================================================
+       DOWNLOAD MP3
+       Render full mix to an OfflineAudioContext, encode to MP3 with lamejs
+       ========================================================== */
+    async function ensureLame() {
+      if (window.lamejs) return window.lamejs;
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/lamejs@1.2.0/lame.min.js';
+        s.onload = () => resolve(window.lamejs);
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    function floatTo16BitPCM(float32Array) {
+      const l = float32Array.length;
+      const out = new Int16Array(l);
+      for (let i = 0; i < l; i++) {
+        let s = Math.max(-1, Math.min(1, float32Array[i]));
+        out[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
+      }
+      return out;
+    }
+
+    async function downloadMixAsMp3() {
+      const playbackData = getActiveSongData();
+      if (!playbackData) return alert('No song loaded');
+      await loadAllSounds(playbackData.groups);
+      const sampleRate = (audioCtx && audioCtx.sampleRate) ? audioCtx.sampleRate : 44100;
+      const duration = computeTotalDuration(playbackData.groups);
+      const length = Math.ceil(duration * sampleRate);
+      const offlineCtx = new OfflineAudioContext(2, length, sampleRate);
+
+      const master = offlineCtx.createGain();
+      master.connect(offlineCtx.destination);
+      master.gain.value = parseFloat($('volumeSlider').value || 1);
+
+      const { times } = buildTimeline(playbackData.groups);
+      for (let gi = 0; gi < playbackData.groups.length; gi++) {
+        const songTime = times[gi];
+        for (const chord of (playbackData.groups[gi].chords || [])) {
+          const srcBuf = soundBuffers[chord.instrument];
+          if (!srcBuf) continue;
+
+          const offlineBuf = offlineCtx.createBuffer(srcBuf.numberOfChannels, srcBuf.length, srcBuf.sampleRate);
+          for (let ch = 0; ch < srcBuf.numberOfChannels; ch++) {
+            offlineBuf.copyToChannel(srcBuf.getChannelData(ch), ch);
+          }
+
+          const src = offlineCtx.createBufferSource();
+          src.buffer = offlineBuf;
+          src.playbackRate.value = noteToPlaybackRate(chord.note || 0);
+          src.connect(master);
+          src.start(songTime);
+        }
+      }
+
+      const rendered = await offlineCtx.startRendering();
+      const lamejs = await ensureLame();
+      const mp3enc = new lamejs.Mp3Encoder(2, sampleRate, 128);
+      const left = rendered.getChannelData(0);
+      const right = rendered.numberOfChannels > 1 ? rendered.getChannelData(1) : left;
+      const chunkSize = 1152;
+      const mp3Data = [];
+
+      for (let i = 0; i < left.length; i += chunkSize) {
+        const leftChunk = floatTo16BitPCM(left.subarray(i, i + chunkSize));
+        const rightChunk = floatTo16BitPCM(right.subarray(i, i + chunkSize));
+        const mp3buf = mp3enc.encodeBuffer(leftChunk, rightChunk);
+        if (mp3buf.length > 0) mp3Data.push(mp3buf);
+      }
+      const flush = mp3enc.flush();
+      if (flush.length > 0) mp3Data.push(flush);
+
+      const blob = new Blob(mp3Data, { type: 'audio/mpeg' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${songData.stem || 'song'}.mp3`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = $('downloadMp3Btn');
+      if (btn) btn.addEventListener('click', () => {
+        btn.disabled = true;
+        const prevHTML = btn.innerHTML;
+        btn.innerHTML = '⏳ Rendering...';
+        downloadMixAsMp3().catch(err => alert('Export failed: ' + err.message)).finally(() => {
+          btn.disabled = false;
+          btn.innerHTML = prevHTML;
+        });
+      });
+    });
+
+    function startPlayheadAnimation() {
+      function tick() {
+        if (!isPlaying || isPaused) return;
+        const elapsed = (audioCtx.currentTime - playStartTime) * playbackSpeed;
+
+        if (elapsed >= totalDuration) {
+          stopPlayback();
+          return;
+        }
+
+        updateProgressUI(elapsed);
+        updatePlayhead(elapsed);
+        animFrameId = requestAnimationFrame(tick);
+      }
+      animFrameId = requestAnimationFrame(tick);
+    }
+
+    function updatePlayhead(elapsed) {
+      if (!layoutData || !layoutData.zTimes) return;
+
+      // Find the highest z whose scheduled time <= elapsed
+      let bestZ = -1;
+      for (const [z, t] of layoutData.zTimes) {
+        if (t <= elapsed && z > bestZ) bestZ = z;
+      }
+      playheadZ = bestZ;
+
+      // Auto-scroll to follow playhead
+      if (playheadZ >= 0) {
+        const cs = cellSize();
+        const phScreenX = playheadZ * cs - viewOffset;
+        const margin = canvas.clientWidth * 0.3;
+        if (phScreenX > canvas.clientWidth - margin || phScreenX < margin) {
+          viewOffset = playheadZ * cs - margin;
+          clampOffset();
+        }
+      }
+
+      drawViewer();
+    }
+
+    function updateProgressUI(elapsed) {
+      const pct = totalDuration > 0 ? (elapsed / totalDuration) * 100 : 0;
+      $('progressFill').style.width = Math.min(100, pct) + '%';
+      $('currentTime').textContent = formatTime(elapsed);
+      $('totalTime').textContent = formatTime(totalDuration);
+    }
+
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    }
+
+    // Controls
+    $('playPauseBtn').addEventListener('click', () => {
+      if (isPlaying && !isPaused) {
+        pausePlayback();
+      } else {
+        startPlayback();
+      }
+    });
+    $('stopBtn').addEventListener('click', stopPlayback);
+
+    // Fullscreen toggle for live playback viewer
+    function updateFullscreenButton() {
+      const icon = $('fullscreenIcon');
+      if (!icon) return;
+      if (document.fullscreenElement) {
+        icon.src = '/static/icons/min.png';
+        icon.alt = 'Exit Fullscreen';
+        $('fullscreenBtn').title = 'Exit Fullscreen';
+      } else {
+        icon.src = '/static/icons/max.png';
+        icon.alt = 'Fullscreen';
+        $('fullscreenBtn').title = 'Fullscreen';
+      }
+    }
+
+    $('fullscreenBtn').addEventListener('click', async () => {
+      const vc = document.querySelector('.viewer-wrapper');
+      if (!vc) return;
+      try {
+        if (!document.fullscreenElement) {
+          await vc.requestFullscreen();
+        } else {
+          await document.exitFullscreen();
+        }
+      } catch (err) {
+        console.warn('Fullscreen failed:', err);
+      }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+      updateFullscreenButton();
+      // Resize/redraw when entering/exiting fullscreen
+      setTimeout(() => {
+        if (layoutData) {
+          clampOffset();
+          drawViewer();
+        }
+      }, 80);
+    });
+
+    updateFullscreenButton();
+
+    $('volumeSlider').addEventListener('input', (e) => {
+      if (gainNode) gainNode.gain.value = parseFloat(e.target.value);
+      const vol = parseFloat(e.target.value);
+      $('volumeIcon').src = vol === 0 ? '/static/icons/volume_mute.png' : vol < 0.5 ? '/static/icons/volume_soft.png' : '/static/icons/volume_loud.png';
+    });
+
+    // Sync the initial volume UI to the HTML default value on first load.
+    $('volumeSlider').value = $('volumeSlider').getAttribute('value') || '0.7';
+    $('volumeSlider').dispatchEvent(new Event('input'));
+    setPlayPauseButtonState('paused');
+
+    $('volumeIcon').addEventListener('click', () => {
+      const slider = $('volumeSlider');
+      if (parseFloat(slider.value) > 0) {
+        slider.dataset.prev = slider.value;
+        slider.value = 0;
+      } else {
+        slider.value = slider.dataset.prev || 0.7;
+      }
+      slider.dispatchEvent(new Event('input'));
+    });
+
+    $('speedSelect').addEventListener('change', () => {
+      if (isPlaying && !isPaused) {
+        const elapsed = (audioCtx.currentTime - playStartTime) * playbackSpeed;
+        pauseElapsed = elapsed;
+        stopAllSources();
+        playbackSpeed = parseFloat($('speedSelect').value);
+        schedulePlayback(pauseElapsed);
+        playStartTime = audioCtx.currentTime - pauseElapsed / playbackSpeed;
+      }
+    });
+
+    // Progress bar click
+    $('progressBar').addEventListener('click', (e) => {
+      if (!songData || totalDuration <= 0) return;
+      const rect = e.currentTarget.getBoundingClientRect();
+      const frac = (e.clientX - rect.left) / rect.width;
+      const seekTime = frac * totalDuration;
+
+      if (isPlaying) {
+        stopAllSources();
+        pauseElapsed = seekTime;
+        playbackSpeed = parseFloat($('speedSelect').value);
+        schedulePlayback(seekTime);
+        playStartTime = audioCtx.currentTime - seekTime / playbackSpeed;
+        if (isPaused) {
+          isPaused = true;
+          updateProgressUI(seekTime);
+          updatePlayhead(seekTime);
+        }
+      } else {
+        pauseElapsed = seekTime;
+        updateProgressUI(seekTime);
+        updatePlayhead(seekTime);
+      }
+    });
+
+    /* ==========================================================
+       SHOW PREVIEW
+       ========================================================== */
+    function showPreview() {
+      refreshSongPreview();
+    }
+
+    function showDownloadSection() {
+      downloadSection.classList.add('visible');
+      downloadSection.classList.add('animate-in');
+    }
+
+    /* ==========================================================
+       DOWNLOAD
+       ========================================================== */
+    $('downloadBtn').addEventListener('click', async () => {
+      if (!songData) return;
+      const btn = $('downloadBtn');
+      const statusEl = $('downloadStatus');
+      btn.disabled = true;
+      statusEl.textContent = 'Generating litematic...';
+      statusEl.style.color = 'var(--accent-diamond)';
+
+      try {
+        const resp = await fetch('/download-litematic', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ groups: getActiveSongData().groups, stem: songData.stem }),
+        });
+
+        if (!resp.ok) {
+          let msg = 'Download failed.';
+          try { const j = await resp.json(); if (j.error) msg = j.error; } catch { }
+          throw new Error(msg);
+        }
+
+        const blob = await resp.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${songData.stem}.litematic`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+
+        statusEl.textContent = `✔ Downloaded ${songData.stem}.litematic`;
+        statusEl.style.color = 'var(--accent-emerald)';
+      } catch (err) {
+        statusEl.textContent = err.message;
+        statusEl.style.color = 'var(--accent-redstone)';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    /* ==========================================================
+       RESIZE HANDLER
+       ========================================================== */
+    window.addEventListener('resize', () => {
+      if (layoutData) {
+        clampOffset();
+        drawViewer();
+      }
+    });
+
+    /* Preload textures on page load */
+    preloadTextures();
+  </script>
+</body>
+
+</html>
