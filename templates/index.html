@@ -641,6 +641,12 @@
       color: var(--accent-emerald);
     }
 
+    .toolbar-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
     .toolbar-label {
       font-size: 0.7rem;
       color: var(--text-muted);
@@ -1126,6 +1132,67 @@
     .checkbox-container input:checked ~ .checkbox-label {
       color: var(--accent-emerald);
     }
+
+    .radio-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+
+    .radio-container input {
+      display: none;
+    }
+
+    .radio-custom {
+      width: 16px;
+      height: 16px;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      position: relative;
+      transition: all var(--transition);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .radio-container:hover .radio-custom {
+      border-color: var(--accent-emerald);
+      box-shadow: 0 0 8px rgba(108, 195, 73, 0.3);
+    }
+
+    .radio-container input:checked + .radio-custom {
+      border-color: var(--accent-emerald);
+      background: var(--bg-surface);
+    }
+
+    .radio-container input:checked + .radio-custom::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+    }
+
+    .radio-label {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+
+    .radio-container:hover .radio-label {
+      color: var(--text-primary);
+    }
+
+    .radio-container input:checked ~ .radio-label {
+      color: var(--accent-emerald);
+    }
   </style>
 </head>
 
@@ -1168,25 +1235,64 @@
             <button class="toolbar-btn active" id="roundUpBtn" data-round="up">Round Up</button>
             <button class="toolbar-btn" id="roundDownBtn" data-round="down">Round Down</button>
           </div>
-          <span class="options-hint">How onsets on a half-tick boundary are snapped to the redstone grid.</span>
+          <span class="options-hint" id="roundingHint">How onsets on a half-tick boundary are snapped to the redstone grid.</span>
         </div>
 
         <div class="options-row" style="margin-top: 12px; gap: 20px;">
           <span class="options-label">Advanced:</span>
-          <div class="checkbox-group">
-            <label class="checkbox-container" title="Allows pitches outside Minecraft's standard 2-octave limit.">
-              <input type="checkbox" id="disableOctaveLimit">
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-label">Disable Octave Limit</span>
-            </label>
-            <label class="checkbox-container" title="Snaps to 50ms game ticks instead of 100ms redstone ticks.">
-              <input type="checkbox" id="disableTickingLimit">
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-label">Disable Ticking Limit</span>
-            </label>
+          <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
+            
+            <!-- Octave Limit Settings -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span class="options-hint" style="font-weight: bold; color: var(--text-primary); font-size: 0.85rem;">Octave Limit:</span>
+              <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 4px;">
+                <label class="radio-container" title="Clamp notes to Minecraft's standard 2-octave range per instrument.">
+                  <input type="radio" name="octaveMode" value="none" checked>
+                  <span class="radio-custom"></span>
+                  <span class="radio-label">Standard (Keep standard 2-octave limit)</span>
+                </label>
+                <label class="radio-container" title="Allows pitches outside Minecraft's standard 2-octave limit using the original instrument.">
+                  <input type="radio" name="octaveMode" value="extended">
+                  <span class="radio-custom"></span>
+                  <span class="radio-label">Normal notes with higher/lower pitch</span>
+                </label>
+                <label class="radio-container" title="Stitch notes across Bass, Guitar, Harp, Flute, and Bell to cover 6 octaves.">
+                  <input type="radio" name="octaveMode" value="stitching">
+                  <span class="radio-custom"></span>
+                  <span class="radio-label">Makeshift hack approach (using different instruments)</span>
+                </label>
+              </div>
+              <span id="stitchingWarning" class="options-hint" style="color: var(--accent-gold); display: none; font-weight: normal; margin-top: 4px; max-width: 600px; line-height: 1.4; padding-left: 4px;">
+                ⚠️ <strong>Advanced Experimental:</strong> If the MIDI file has multiple instruments, stitching different pitches to different instruments may clash and sound off.
+              </span>
+            </div>
+
+            <!-- Ticking Limit Settings -->
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+              <span class="options-hint" style="font-weight: bold; color: var(--text-primary); font-size: 0.85rem;">Ticking Limit:</span>
+              <div style="padding-left: 4px;">
+                <label class="checkbox-container" title="Snaps to 50ms game ticks instead of 100ms redstone ticks.">
+                  <input type="checkbox" id="disableTickingLimit">
+                  <span class="checkbox-custom"></span>
+                  <span class="checkbox-label">Disable Ticking Limit</span>
+                </label>
+              </div>
+            <!-- Volume/Velocity Settings -->
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+              <span class="options-hint" style="font-weight: bold; color: var(--text-primary); font-size: 0.85rem;">Volume/Velocity:</span>
+              <div style="padding-left: 4px;">
+                <label class="checkbox-container" title="Keep and apply note volume (velocity) data from the MIDI file in the playback, MP3, and .mcfunction exports.">
+                  <input type="checkbox" id="useVelocityData" checked>
+                  <span class="checkbox-custom"></span>
+                  <span class="checkbox-label">Use MIDI note volume data (for playback, MP3, and .mcfunction)</span>
+                </label>
+              </div>
+            </div>
+            
           </div>
+
           <span id="litematicaWarning" class="options-hint" style="color: var(--accent-redstone); display: none; font-weight: bold; width: 100%;">
-            ⚠️ Disabling the ticking limit or octave limit will break the layout and timing in Litematica! Use these options only to get the MP3.
+            ⚠️ Disabling the ticking limit or enabling Extended Pitch will break the layout and timing in Litematica! Use these options only to get the MP3.
           </span>
         </div>
 
@@ -1298,11 +1404,13 @@
     <section id="download-section" class="card">
       <div class="card-header">
         <span>📦</span>
-        <span>Export to Litematica</span>
+        <span>Export</span>
       </div>
       <div class="card-body">
-        <div style="display:flex; gap:10px; align-items:center;">
-          <button class="download-btn" id="downloadBtn" style="flex:1;">⬇ Download .litematic</button>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="download-btn" id="downloadBtn" style="flex:1; min-width:180px;">⬇ Download .litematic</button>
+          <button class="download-btn" id="downloadMcfunctionBtn" title="Download .mcfunction (Notty format)" style="flex:1; min-width:180px;
+            display:flex; align-items:center; gap:8px; justify-content:center;">⬇ .mcfunction</button>
           <button class="download-btn" id="downloadMp3Btn" title="Download MP3" style="flex: none; width:140px; height: 56px; padding:12px 14px; font-size:0.85rem;
             display:flex; align-items:center; gap:8px; justify-content:center;">⬇ MP3</button>
         </div>
@@ -1784,13 +1892,81 @@
 
     function updateLitematicaWarning() {
       const warningEl = $('litematicaWarning');
+      const litBtn = $('downloadBtn');
+      const mcBtn = $('downloadMcfunctionBtn');
+      const tickingDisabled = $('disableTickingLimit').checked;
+      
+      const octaveMode = document.querySelector('input[name="octaveMode"]:checked')?.value || 'none';
+      
+      const stitchingWarningEl = $('stitchingWarning');
+      if (stitchingWarningEl) {
+        stitchingWarningEl.style.display = (octaveMode === 'stitching') ? 'block' : 'none';
+      }
+
+      const litematicaBroken = tickingDisabled || (octaveMode === 'extended');
+      
       if (warningEl) {
-        const show = $('disableTickingLimit').checked || $('disableOctaveLimit').checked;
-        warningEl.style.display = show ? 'block' : 'none';
+        if (litematicaBroken) {
+          warningEl.style.display = 'block';
+          if (tickingDisabled && (octaveMode === 'extended')) {
+            warningEl.innerHTML = '⚠️ Disabling the ticking limit and enabling Extended Pitch will break the layout and timing in Litematica! Use these options only to get the MP3.';
+          } else if (tickingDisabled) {
+            warningEl.innerHTML = '⚠️ Disabling the ticking limit will break the layout and timing in Litematica! Use this option only to get the MP3.';
+          } else {
+            warningEl.innerHTML = '⚠️ Enabling Extended Pitch will break the layout and timing in Litematica! Use this option only to get the MP3.';
+          }
+        } else {
+          warningEl.style.display = 'none';
+        }
+      }
+
+      if (litBtn) {
+        litBtn.disabled = litematicaBroken;
+        litBtn.title = litematicaBroken ? 'Litematica export is unavailable when these options are enabled' : '';
+      }
+
+      const mcfunctionDisabled = (octaveMode === 'extended');
+      if (mcBtn) {
+        mcBtn.disabled = mcfunctionDisabled;
+        if (mcfunctionDisabled) {
+          mcBtn.title = 'Extended Pitch mode cannot be exported to .mcfunction. To export, select the Makeshift Hack Approach instead.';
+        } else {
+          mcBtn.title = 'Download .mcfunction (Notty format)';
+        }
+      }
+      
+      const statusEl = $('downloadStatus');
+      if (statusEl) {
+        if (mcfunctionDisabled) {
+          statusEl.innerHTML = '💡 <strong>Tip:</strong> .mcfunction export is disabled because Minecraft cannot natively play arbitrary pitches. To export a wide pitch range to Minecraft, enable the <strong>Makeshift hack approach (using different instruments)</strong> option under Advanced settings.';
+          statusEl.style.color = 'var(--text-secondary)';
+        } else if (statusEl.innerHTML.includes('💡 <strong>Tip:</strong>')) {
+          statusEl.innerHTML = '';
+        }
+      }
+
+      // Disable Tie Rounding toggle buttons and change hint text if ticking limit is disabled
+      const rUpBtn = $('roundUpBtn');
+      const rDownBtn = $('roundDownBtn');
+      const rHint = $('roundingHint');
+      if (rUpBtn && rDownBtn && rHint) {
+        if (tickingDisabled) {
+          rUpBtn.disabled = true;
+          rDownBtn.disabled = true;
+          rHint.innerHTML = '💡 <strong>Not needed:</strong> Snap resolution is set to fine 50ms game ticks, bypassing the redstone grid.';
+          rHint.style.color = 'var(--text-secondary)';
+        } else {
+          rUpBtn.disabled = false;
+          rDownBtn.disabled = false;
+          rHint.textContent = 'How onsets on a half-tick boundary are snapped to the redstone grid.';
+          rHint.style.color = '';
+        }
       }
     }
     $('disableTickingLimit').addEventListener('change', updateLitematicaWarning);
-    $('disableOctaveLimit').addEventListener('change', updateLitematicaWarning);
+    document.querySelectorAll('input[name="octaveMode"]').forEach(radio => {
+      radio.addEventListener('change', updateLitematicaWarning);
+    });
 
     /* ==========================================================
        CONVERSION
@@ -1803,7 +1979,10 @@
       const formData = new FormData();
       formData.append('file', currentFile);
       formData.append('round_half_up', roundHalfUp ? 'true' : 'false');
-      formData.append('disable_octave_limit', $('disableOctaveLimit').checked ? 'true' : 'false');
+      
+      const octaveMode = document.querySelector('input[name="octaveMode"]:checked')?.value || 'none';
+      formData.append('disable_octave_limit', (octaveMode !== 'none') ? 'true' : 'false');
+      formData.append('octave_limit_mode', octaveMode);
       formData.append('disable_ticking_limit', $('disableTickingLimit').checked ? 'true' : 'false');
 
       try {
@@ -1838,8 +2017,12 @@
        ========================================================== */
     function splitDelay(delay) {
       const parts = [];
-      let rem = delay;
-      while (rem > 0) { const p = Math.min(4, rem); parts.push(p); rem -= p; }
+      let rem = Math.round(parseFloat(delay) * 2) / 2;
+      while (rem > 0) {
+        const p = Math.min(4, rem);
+        parts.push(p);
+        rem = Math.round((rem - p) * 2) / 2;
+      }
       return parts;
     }
 
@@ -1870,7 +2053,7 @@
 
       // Delay chain for a group
       function delayChain(g) {
-        let delay = parseInt(g.redstoneTickDelay) || 0;
+        let delay = parseFloat(g.redstoneTickDelay) || 0;
         if ((g.chords || []).length >= 4) delay = Math.max(0, delay - 1);
         return splitDelay(delay);
       }
@@ -1936,12 +2119,13 @@
           const dustZ = chainEndZ + 1;
           const repZ = chainEndZ + 2;
           const noteZ = chainEndZ + 3;
-          const delay = parseInt(g.redstoneTickDelay, 10) || 0;
+          const delay = parseFloat(g.redstoneTickDelay) || 0;
           const forceCrossMiddle = delay > 1;
           const xPositions = centeredXPositions(chords.length);
+          const chordRepDelay = (delay > 0 && delay < 1) ? delay : 1;
           for (let ci = 0; ci < chords.length; ci++) {
             addCell(xPositions[ci], dustZ, 'dust', { shape: dustShapeForIndex(ci, chords.length, forceCrossMiddle) });
-            addCell(xPositions[ci], repZ, 'repeater', { delay: 1, chordRepeater: true });
+            addCell(xPositions[ci], repZ, 'repeater', { delay: chordRepDelay, chordRepeater: true });
             addCell(xPositions[ci], noteZ, 'noteblock', {
               instrument: chords[ci].instrument,
               note: chords[ci].note,
@@ -1974,6 +2158,16 @@
         } else {
           // dust, observer, noteblock — signal passes through in the same tick
           colTime += 0;
+        }
+      }
+
+      // Align visual timeline start with the audio start (t = 0.0)
+      const firstNoteCells = layout.cells.filter(c => c.type === 'noteblock' && c.data.groupIndex === 0);
+      if (firstNoteCells.length > 0) {
+        const firstNoteZ = Math.min(...firstNoteCells.map(c => c.z));
+        const firstNoteTime = zTimes.get(firstNoteZ) || 0;
+        for (const [z, t] of zTimes.entries()) {
+          zTimes.set(z, t - firstNoteTime);
         }
       }
 
@@ -2090,7 +2284,7 @@
 
       // Playhead
       if (playheadZ >= 0) {
-        const phX = playheadZ * cs - viewOffset;
+        const phX = (playheadZ + 1) * cs - viewOffset;
         ctx.strokeStyle = 'rgba(231, 76, 60, 0.8)';
         ctx.lineWidth = 2;
         ctx.setLineDash([4, 4]);
@@ -2678,7 +2872,17 @@
           const source = audioCtx.createBufferSource();
           source.buffer = buffer;
           source.playbackRate.value = noteToPlaybackRate(chord.note || 0);
-          source.connect(gainNode);
+          
+          const useVel = $('useVelocityData')?.checked ?? true;
+          if (useVel && chord.volume !== undefined) {
+            const noteGain = audioCtx.createGain();
+            noteGain.gain.value = chord.volume;
+            source.connect(noteGain);
+            noteGain.connect(gainNode);
+          } else {
+            source.connect(gainNode);
+          }
+          
           source.start(schedTime);
           scheduledSources.push(source);
         }
@@ -2808,7 +3012,17 @@
           const src = offlineCtx.createBufferSource();
           src.buffer = offlineBuf;
           src.playbackRate.value = noteToPlaybackRate(chord.note || 0);
-          src.connect(master);
+          
+          const useVel = $('useVelocityData')?.checked ?? true;
+          if (useVel && chord.volume !== undefined) {
+            const noteGain = offlineCtx.createGain();
+            noteGain.gain.value = chord.volume;
+            src.connect(noteGain);
+            noteGain.connect(master);
+          } else {
+            src.connect(master);
+          }
+          
           src.start(songTime);
         }
       }
@@ -2884,10 +3098,10 @@
       // Auto-scroll to follow playhead
       if (playheadZ >= 0) {
         const cs = cellSize();
-        const phScreenX = playheadZ * cs - viewOffset;
+        const phScreenX = (playheadZ + 1) * cs - viewOffset;
         const margin = canvas.clientWidth * 0.3;
         if (phScreenX > canvas.clientWidth - margin || phScreenX < margin) {
-          viewOffset = playheadZ * cs - margin;
+          viewOffset = (playheadZ + 1) * cs - margin;
           clampOffset();
         }
       }
@@ -3071,6 +3285,97 @@
         statusEl.style.color = 'var(--accent-redstone)';
       } finally {
         btn.disabled = false;
+        // Re-apply advanced mode disable state
+        updateLitematicaWarning();
+      }
+    });
+
+    /* ==========================================================
+       MCFUNCTION EXPORT (Notty format)
+       ========================================================== */
+    function generateMcfunction() {
+      const playbackData = getActiveSongData();
+      if (!playbackData) return null;
+
+      const stem = songData.stem || 'song';
+      const groups = playbackData.groups;
+      const notes = [];
+
+      // Strip leading rest: offset all ticks so the first note starts at 0
+      const leadingOffset = (groups.length && groups[0].startTick) ? groups[0].startTick : 0;
+
+      for (const group of groups) {
+        const when = group.startTick - leadingOffset;
+        for (const chord of (group.chords || [])) {
+          const instrument = chord.instrument;
+          // Minecraft pitch formula: 2^((noteValue - 12) / 12)
+          const noteValue = chord.note || 0;
+          const pitch = Math.pow(2, (noteValue - 12) / 12);
+          // Round to 4 decimal places for clean output
+          const pitchRounded = Math.round(pitch * 10000) / 10000;
+          
+          const useVelocity = $('useVelocityData')?.checked ?? true;
+          const noteObj = { instrument, note: pitchRounded, when };
+          if (useVelocity && chord.volume !== undefined) {
+            noteObj.volume = Math.round(chord.volume * 10000) / 10000;
+          }
+          notes.push(noteObj);
+        }
+      }
+
+      // Sort notes by when time, then by instrument for stable output
+      notes.sort((a, b) => a.when - b.when || a.instrument.localeCompare(b.instrument));
+
+      // Build the JSON payload
+      const notesJson = notes.map(n => {
+        let noteStr = `{"instrument":"${n.instrument}","note":${n.note.toFixed(4)}`;
+        if (n.volume !== undefined) {
+          noteStr += `,"volume":${n.volume.toFixed(4)}`;
+        }
+        noteStr += `,"when":${n.when}}`;
+        return noteStr;
+      }).join(',');
+
+      const lines = [
+        `# ${stem} (Notty format)`,
+        `# Generated by Notematic Studio`,
+        ``,
+        `data modify storage music sheet set value {"tempo":1,"notes":[${notesJson}]}`,
+        ``,
+        `# Play the song`,
+        `function music:play`,
+      ];
+
+      return lines.join('\n');
+    }
+
+    $('downloadMcfunctionBtn').addEventListener('click', () => {
+      if (!songData) return;
+      const btn = $('downloadMcfunctionBtn');
+      const statusEl = $('downloadStatus');
+      btn.disabled = true;
+
+      try {
+        const content = generateMcfunction();
+        if (!content) throw new Error('No song data available.');
+
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${songData.stem || 'song'}.mcfunction`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+
+        statusEl.textContent = `✔ Downloaded ${songData.stem || 'song'}.mcfunction`;
+        statusEl.style.color = 'var(--accent-emerald)';
+      } catch (err) {
+        statusEl.textContent = err.message;
+        statusEl.style.color = 'var(--accent-redstone)';
+      } finally {
+        btn.disabled = false;
       }
     });
 
@@ -3084,7 +3389,8 @@
       }
     });
 
-    /* Preload textures on page load */
+    /* Initialize state and preload textures on page load */
+    updateLitematicaWarning();
     preloadTextures();
   </script>
 </body>

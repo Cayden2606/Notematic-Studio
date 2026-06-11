@@ -49,6 +49,7 @@ def convert_json():
     round_half_up = request.form.get("round_half_up", "true").lower() != "false"
     disable_octave_limit = request.form.get("disable_octave_limit", "false").lower() == "true"
     disable_ticking_limit = request.form.get("disable_ticking_limit", "false").lower() == "true"
+    octave_limit_mode = request.form.get("octave_limit_mode", "extended")
 
     with tempfile.TemporaryDirectory(prefix="midi_litematic_") as temp_dir_name:
         temp_dir = Path(temp_dir_name)
@@ -61,6 +62,7 @@ def convert_json():
             round_half_up=round_half_up,
             disable_octave_limit=disable_octave_limit,
             disable_ticking_limit=disable_ticking_limit,
+            octave_limit_mode=octave_limit_mode,
         )
 
     return jsonify({

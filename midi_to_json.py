@@ -122,7 +122,7 @@ def octave_fit(midi_note, low, high):
     return n, False
 
 
-def convert(path, tpr=1, round_half_up=True, disable_octave_limit=False, disable_ticking_limit=False):
+def convert(path, tpr=1, round_half_up=True, disable_octave_limit=False, disable_ticking_limit=False, octave_limit_mode="extended"):
     """Parse a MIDI file and return (groups, summary).
 
     Onsets are quantized to the redstone-tick grid (every 2 game ticks) so
@@ -174,7 +174,35 @@ def convert(path, tpr=1, round_half_up=True, disable_octave_limit=False, disable
                     pitch = PITCH_NAMES[0]
                 else:
                     if disable_octave_limit:
-                        note_value = msg.note - info["low_midi"]
+                        if octave_limit_mode == "stitching":
+                            if info["low_midi"] <= msg.note <= info["high_midi"]:
+                                note_value = msg.note - info["low_midi"]
+                            else:
+                                if msg.note < 30:
+                                    instrument = "bass"
+                                    n = 30
+                                elif msg.note < 42:
+                                    instrument = "bass"
+                                    n = msg.note
+                                elif msg.note < 54:
+                                    instrument = "guitar"
+                                    n = msg.note
+                                elif msg.note < 66:
+                                    instrument = "harp"
+                                    n = msg.note
+                                elif msg.note < 78:
+                                    instrument = "flute"
+                                    n = msg.note
+                                elif msg.note <= 102:
+                                    instrument = "bell"
+                                    n = msg.note
+                                else:
+                                    instrument = "bell"
+                                    n = 102
+                                info = INSTRUMENTS[instrument]
+                                note_value = n - info["low_midi"]
+                        else:
+                            note_value = msg.note - info["low_midi"]
                         pitch = PITCH_NAMES[note_value % 12]
                     else:
                         fitted, oor = octave_fit(msg.note, info["low_midi"], info["high_midi"])
@@ -190,6 +218,8 @@ def convert(path, tpr=1, round_half_up=True, disable_octave_limit=False, disable
                     "note": note_value,
                     "instrument": instrument,
                     "trackName": track_name,
+                    "velocity": msg.velocity,
+                    "volume": round(msg.velocity / 127.0, 4),
                 }))
 
     # Group notes that share the same start tick into chords.
@@ -280,6 +310,8 @@ def main():
     )
     ap.add_argument("--disable-octave-limit", action="store_true", help="disable the minecraft 2-octave limit")
     ap.add_argument("--disable-ticking-limit", action="store_true", help="disable redstone 0.1s quantization limit")
+    ap.add_argument("--octave-limit-mode", choices=["extended", "stitching"], default="extended",
+                    help="how to handle octave limit if disabled (extended = raw high/low pitch, stitching = shift instruments)")
     ap.add_argument("--self-test", action="store_true", help="run internal sanity checks and exit")
     args = ap.parse_args()
 
@@ -295,6 +327,7 @@ def main():
         round_half_up=args.round_half_up,
         disable_octave_limit=args.disable_octave_limit,
         disable_ticking_limit=args.disable_ticking_limit,
+        octave_limit_mode=args.octave_limit_mode,
     )
     out_path = args.output or (args.input.rsplit(".", 1)[0] + ".json")
     with open(out_path, "w", encoding="utf-8") as f:
