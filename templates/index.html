@@ -1411,6 +1411,8 @@
           <button class="download-btn" id="downloadBtn" style="flex:1; min-width:180px;">⬇ Download .litematic</button>
           <button class="download-btn" id="downloadMcfunctionBtn" title="Download .mcfunction (Notty format)" style="flex:1; min-width:180px;
             display:flex; align-items:center; gap:8px; justify-content:center;">⬇ .mcfunction</button>
+          <button class="download-btn" id="downloadJsonBtn" title="Download .json (NotematicPlayer format)" style="flex:1; min-width:180px;
+            display:flex; align-items:center; gap:8px; justify-content:center;">⬇ .json</button>
           <button class="download-btn" id="downloadMp3Btn" title="Download MP3" style="flex: none; width:140px; height: 56px; padding:12px 14px; font-size:0.85rem;
             display:flex; align-items:center; gap:8px; justify-content:center;">⬇ MP3</button>
         </div>
@@ -1894,6 +1896,7 @@
       const warningEl = $('litematicaWarning');
       const litBtn = $('downloadBtn');
       const mcBtn = $('downloadMcfunctionBtn');
+      const jsonBtn = $('downloadJsonBtn');
       const tickingDisabled = $('disableTickingLimit').checked;
       
       const octaveMode = document.querySelector('input[name="octaveMode"]:checked')?.value || 'none';
@@ -1934,11 +1937,20 @@
           mcBtn.title = 'Download .mcfunction (Notty format)';
         }
       }
+
+      if (jsonBtn) {
+        jsonBtn.disabled = mcfunctionDisabled;
+        if (mcfunctionDisabled) {
+          jsonBtn.title = 'Extended Pitch mode cannot be exported to .json. To export, select the Makeshift Hack Approach instead.';
+        } else {
+          jsonBtn.title = 'Download .json (NotematicPlayer format)';
+        }
+      }
       
       const statusEl = $('downloadStatus');
       if (statusEl) {
         if (mcfunctionDisabled) {
-          statusEl.innerHTML = '💡 <strong>Tip:</strong> .mcfunction export is disabled because Minecraft cannot natively play arbitrary pitches. To export a wide pitch range to Minecraft, enable the <strong>Makeshift hack approach (using different instruments)</strong> option under Advanced settings.';
+          statusEl.innerHTML = '💡 <strong>Tip:</strong> .mcfunction and .json exports are disabled because Minecraft cannot natively play arbitrary pitches. To export a wide pitch range to Minecraft/NotematicPlayer, enable the <strong>Makeshift hack approach (using different instruments)</strong> option under Advanced settings.';
           statusEl.style.color = 'var(--text-secondary)';
         } else if (statusEl.innerHTML.includes('💡 <strong>Tip:</strong>')) {
           statusEl.innerHTML = '';
@@ -3370,6 +3382,79 @@
         URL.revokeObjectURL(url);
 
         statusEl.textContent = `✔ Downloaded ${songData.stem || 'song'}.mcfunction`;
+        statusEl.style.color = 'var(--accent-emerald)';
+      } catch (err) {
+        statusEl.textContent = err.message;
+        statusEl.style.color = 'var(--accent-redstone)';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    /* ==========================================================
+       JSON EXPORT (NotematicPlayer format)
+       ========================================================== */
+    function generateJsonExport() {
+      const playbackData = getActiveSongData();
+      if (!playbackData) return null;
+
+      const groups = playbackData.groups;
+      const notes = [];
+
+      // Strip leading rest: offset all ticks so the first note starts at 0
+      const leadingOffset = (groups.length && groups[0].startTick) ? groups[0].startTick : 0;
+
+      for (const group of groups) {
+        const when = group.startTick - leadingOffset;
+        for (const chord of (group.chords || [])) {
+          const instrument = chord.instrument;
+          // Minecraft pitch formula: 2^((noteValue - 12) / 12)
+          const noteValue = chord.note || 0;
+          const pitch = Math.pow(2, (noteValue - 12) / 12);
+          // Round to 4 decimal places for clean output
+          const pitchRounded = Math.round(pitch * 10000) / 10000;
+          
+          const useVelocity = $('useVelocityData')?.checked ?? true;
+          const noteObj = { instrument, note: pitchRounded, when };
+          if (useVelocity && chord.volume !== undefined) {
+            noteObj.volume = Math.round(chord.volume * 10000) / 10000;
+          }
+          notes.push(noteObj);
+        }
+      }
+
+      // Sort notes by when time, then by instrument for stable output
+      notes.sort((a, b) => a.when - b.when || a.instrument.localeCompare(b.instrument));
+
+      const outputData = {
+        tempo: 1.0,
+        notes: notes
+      };
+
+      return JSON.stringify(outputData, null, 2);
+    }
+
+    $('downloadJsonBtn').addEventListener('click', () => {
+      if (!songData) return;
+      const btn = $('downloadJsonBtn');
+      const statusEl = $('downloadStatus');
+      btn.disabled = true;
+
+      try {
+        const content = generateJsonExport();
+        if (!content) throw new Error('No song data available.');
+
+        const blob = new Blob([content], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${songData.stem || 'song'}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+
+        statusEl.textContent = `✔ Downloaded ${songData.stem || 'song'}.json`;
         statusEl.style.color = 'var(--accent-emerald)';
       } catch (err) {
         statusEl.textContent = err.message;
